@@ -24,12 +24,7 @@ namespace ecommerce_shop.Controllers
 
             return View();
         }
-        public ActionResult Product()
-        {
-         
-
-            return View();
-        }
+        
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
