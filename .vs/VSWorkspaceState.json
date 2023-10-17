@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ecommerce-shop",
+    "\\ecommerce-shop\\Views",
+    "\\ecommerce-shop\\Views\\Home"
   ],
-  "SelectedNode": "\\ecommerce-shop.sln",
+  "SelectedNode": "\\ecommerce-shop\\Views\\Home\\Product.cshtml",
   "PreviewInSolutionExplorer": false
 }
