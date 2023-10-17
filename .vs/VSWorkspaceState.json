@@ -2,9 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\ecommerce-shop",
+    "\\ecommerce-shop\\Controllers",
+    "\\ecommerce-shop\\obj",
+    "\\ecommerce-shop\\Properties",
     "\\ecommerce-shop\\Views",
     "\\ecommerce-shop\\Views\\Home"
   ],
-  "SelectedNode": "\\ecommerce-shop\\Views\\Home\\Product.cshtml",
+  "SelectedNode": "\\ecommerce-shop\\Views\\Home\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }
