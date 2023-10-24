@@ -4,21 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace ecommerce_shop.Controllers
+namespace ecommerce_shop.Areas.Editor.Controllers
 {
-    public class HomeController : Controller
+    public class HomeEditorController : Controller
     {
+        // GET: Editor/HomeEditor
         public ActionResult Index()
         {
             return View();
         }
-        public ActionResult Product()
-        {
-            
-
-            return View();
-        }
-   
-      
     }
 }
