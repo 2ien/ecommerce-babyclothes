@@ -1,5 +1,5 @@
 
-<!DOCTYPE html>
+@*<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>@ViewBag.Title</title>
@@ -43,6 +43,56 @@
         <p>&copy; 2023 Trang Web Bán Đồ Em Bé</p>
     </footer>
 </body>
+</html>*@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+    <style>
+        .navbar-brand {
+            font-family: 'Sedgwick Ave Display', cursive;
+            front-size: 30px;
+            front-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+   
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Today's Fashion</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Áo</a></li>
+                <li><a href="#">Quần</a></li>
+                <li><a href="#">Sale</a></li>
+                <li><a href="#">Hàng mới nhập</a></li>
+            </ul>
+            <button class="btn btn- navbar-btn">Sign up/Sign in</button>
+        </div>
+    </nav>
+    <div>
+        @RenderBody()
+    </div>
+    <footer>
+        <p>&copy; 2023 Trang Web Bán Đồ Em Bé</p>
+        <p> Địa chỉ liên hệ: todayfashion@gmail.com</p>
+    </footer>
+
+</body>
 </html>
+
 
 
