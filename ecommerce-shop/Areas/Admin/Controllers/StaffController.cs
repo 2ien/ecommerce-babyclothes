@@ -9,19 +9,19 @@ namespace ecommerce_shop.Areas.Admin.Controllers
     public class StaffController : Controller
     {
         // GET: Admin/Staff
-        public ActionResult DanhSach()
+        public ActionResult StaffList()
         {
             return View();
         }
-        public ActionResult ThemMoi()
+        public ActionResult Add()
         {
             return View();
         }
-        public ActionResult CapNhat()
+        public ActionResult Update()
         {
             return View();
         }
-        public ActionResult Xoa()
+        public ActionResult Delete()
         {
             return View();
         }

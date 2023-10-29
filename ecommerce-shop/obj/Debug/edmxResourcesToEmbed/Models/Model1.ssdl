@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBQLEcommerceShopModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Decentralized">
+    <Key>
+      <PropertyRef Name="idStaff" />
+      <PropertyRef Name="idFunction" />
+    </Key>
+    <Property Name="idStaff" Type="int" Nullable="false" />
+    <Property Name="idFunction" Type="int" Nullable="false" />
+    <Property Name="Comment" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Function">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FunctionName" Type="nvarchar" MaxLength="100" />
+    <Property Name="FunctionCode" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Staff">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Usename" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+    <Property Name="StaffName" Type="nvarchar" MaxLength="10" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Birthday" Type="date" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" />
+    <Property Name="idEmployeeClassification" Type="int" />
+    <Property Name="EmployeePosition" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Tbl_Cart">
+    <Key>
+      <PropertyRef Name="CartId" />
+    </Key>
+    <Property Name="CartId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductId" Type="int" />
+    <Property Name="MemberId" Type="int" />
+    <Property Name="CartStatusId" Type="int" />
+  </EntityType>
+  <EntityType Name="Tbl_CartStatus">
+    <Key>
+      <PropertyRef Name="CartStatusId" />
+    </Key>
+    <Property Name="CartStatusId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CartStatus" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Tbl_Category">
+    <Key>
+      <PropertyRef Name="CategoryId" />
+    </Key>
+    <Property Name="CategoryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryName" Type="nvarchar" MaxLength="500" />
+    <Property Name="IsAtive" Type="bit" />
+    <Property Name="IsDelete" Type="bit" />
+  </EntityType>
+  <EntityType Name="Tbl_MemberRole">
+    <Key>
+      <PropertyRef Name="MemberRoleID" />
+    </Key>
+    <Property Name="MemberRoleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MemberId" Type="int" />
+    <Property Name="RoleId" Type="int" />
+  </EntityType>
+  <EntityType Name="Tbl_Members">
+    <Key>
+      <PropertyRef Name="MemberId" />
+    </Key>
+    <Property Name="MemberId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="500" />
+    <Property Name="EmailId" Type="nvarchar" MaxLength="200" />
+    <Property Name="Password" Type="varchar" MaxLength="200" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IsDelete" Type="bit" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Tbl_Product">
+    <Key>
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="ProductId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductName" Type="nvarchar" MaxLength="500" />
+    <Property Name="CategoryId" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IsDelete" Type="bit" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="Description" Type="datetime" />
+    <Property Name="ProductImage" Type="nvarchar(max)" />
+    <Property Name="IsFeatured" Type="bit" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="Tbl_Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleName" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Tbl_ShippingDetails">
+    <Key>
+      <PropertyRef Name="ShippingDetailId" />
+    </Key>
+    <Property Name="ShippingDetailId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MemberId" Type="int" />
+    <Property Name="Adress" Type="nvarchar" MaxLength="500" />
+    <Property Name="City" Type="nvarchar" MaxLength="500" />
+    <Property Name="OrderId" Type="int" />
+    <Property Name="AmountPaid" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="PaymentType" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Tbl_SlideImage">
+    <Key>
+      <PropertyRef Name="SlideId" />
+    </Key>
+    <Property Name="SlideId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SlideTitle" Type="nvarchar" MaxLength="500" />
+    <Property Name="SlideImage" Type="nvarchar(max)" />
+  </EntityType>
+  <Association Name="FK__Tbl_Cart__Produc__47DBAE45">
+    <End Role="Tbl_Product" Type="Self.Tbl_Product" Multiplicity="0..1" />
+    <End Role="Tbl_Cart" Type="Self.Tbl_Cart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tbl_Product">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="Tbl_Cart">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tbl_Produ__Categ__3D5E1FD2">
+    <End Role="Tbl_Category" Type="Self.Tbl_Category" Multiplicity="0..1" />
+    <End Role="Tbl_Product" Type="Self.Tbl_Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tbl_Category">
+        <PropertyRef Name="CategoryId" />
+      </Principal>
+      <Dependent Role="Tbl_Product">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tbl_Shipp__Payme__4222D4EF">
+    <End Role="Tbl_Members" Type="Self.Tbl_Members" Multiplicity="0..1" />
+    <End Role="Tbl_ShippingDetails" Type="Self.Tbl_ShippingDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tbl_Members">
+        <PropertyRef Name="MemberId" />
+      </Principal>
+      <Dependent Role="Tbl_ShippingDetails">
+        <PropertyRef Name="MemberId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Decentralized_Function">
+    <End Role="Function" Type="Self.Function" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Decentralized" Type="Self.Decentralized" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Function">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Decentralized">
+        <PropertyRef Name="idFunction" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Decentralized_Staff">
+    <End Role="Staff" Type="Self.Staff" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Decentralized" Type="Self.Decentralized" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Staff">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Decentralized">
+        <PropertyRef Name="idStaff" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DBQLEcommerceShopModelStoreContainer">
+    <EntitySet Name="Decentralized" EntityType="Self.Decentralized" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Function" EntityType="Self.Function" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Staff" EntityType="Self.Staff" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tbl_Cart" EntityType="Self.Tbl_Cart" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tbl_CartStatus" EntityType="Self.Tbl_CartStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tbl_Category" EntityType="Self.Tbl_Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tbl_MemberRole" EntityType="Self.Tbl_MemberRole" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tbl_Members" EntityType="Self.Tbl_Members" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tbl_Product" EntityType="Self.Tbl_Product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tbl_Roles" EntityType="Self.Tbl_Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tbl_ShippingDetails" EntityType="Self.Tbl_ShippingDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tbl_SlideImage" EntityType="Self.Tbl_SlideImage" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Tbl_Cart__Produc__47DBAE45" Association="Self.FK__Tbl_Cart__Produc__47DBAE45">
+      <End Role="Tbl_Product" EntitySet="Tbl_Product" />
+      <End Role="Tbl_Cart" EntitySet="Tbl_Cart" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tbl_Produ__Categ__3D5E1FD2" Association="Self.FK__Tbl_Produ__Categ__3D5E1FD2">
+      <End Role="Tbl_Category" EntitySet="Tbl_Category" />
+      <End Role="Tbl_Product" EntitySet="Tbl_Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tbl_Shipp__Payme__4222D4EF" Association="Self.FK__Tbl_Shipp__Payme__4222D4EF">
+      <End Role="Tbl_Members" EntitySet="Tbl_Members" />
+      <End Role="Tbl_ShippingDetails" EntitySet="Tbl_ShippingDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Decentralized_Function" Association="Self.FK_Decentralized_Function">
+      <End Role="Function" EntitySet="Function" />
+      <End Role="Decentralized" EntitySet="Decentralized" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Decentralized_Staff" Association="Self.FK_Decentralized_Staff">
+      <End Role="Staff" EntitySet="Staff" />
+      <End Role="Decentralized" EntitySet="Decentralized" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="28c0b341bfab4473a3e2968014ff0a49" Name="Diagram1" ZoomLevel="88">
+        <EntityTypeShape EntityType="DBQLEcommerceShopModel.Tbl_Cart" Width="1.5" PointX="5.25" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBQLEcommerceShopModel.Tbl_CartStatus" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBQLEcommerceShopModel.Tbl_Category" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBQLEcommerceShopModel.Tbl_MemberRole" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBQLEcommerceShopModel.Tbl_Members" Width="1.5" PointX="0.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBQLEcommerceShopModel.Tbl_Product" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBQLEcommerceShopModel.Tbl_Roles" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBQLEcommerceShopModel.Tbl_ShippingDetails" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBQLEcommerceShopModel.Tbl_SlideImage" Width="1.5" PointX="5.75" PointY="7.75" IsExpanded="true" />
+        <AssociationConnector Association="DBQLEcommerceShopModel.FK__Tbl_Cart__Produc__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="DBQLEcommerceShopModel.FK__Tbl_Produ__Categ__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="DBQLEcommerceShopModel.FK__Tbl_Shipp__Payme__4222D4EF" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DBQLEcommerceShopModel.Decentralized" Width="1.5" PointX="15.25" PointY="1.5" />
+        <EntityTypeShape EntityType="DBQLEcommerceShopModel.Function" Width="1.5" PointX="13" PointY="5.5" />
+        <EntityTypeShape EntityType="DBQLEcommerceShopModel.Staff" Width="1.5" PointX="13" PointY="1" />
+        <AssociationConnector Association="DBQLEcommerceShopModel.FK_Decentralized_Function" />
+        <AssociationConnector Association="DBQLEcommerceShopModel.FK_Decentralized_Staff" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

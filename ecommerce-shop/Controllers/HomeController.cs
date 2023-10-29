@@ -12,13 +12,10 @@ namespace ecommerce_shop.Controllers
         {
             return View();
         }
-        public ActionResult Product()
+        public ActionResult HuongDan()
         {
-            
-
             return View();
         }
-   
       
     }
 }
