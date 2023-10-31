@@ -12,10 +12,12 @@ namespace ecommerce_shop.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Tbl_SlideImage
+    public partial class User
     {
-        public int SlideId { get; set; }
-        public string SlideTitle { get; set; }
-        public string SlideImage { get; set; }
+        public int ID { get; set; }
+        public string Username { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public Nullable<bool> IsAdmin { get; set; }
     }
 }

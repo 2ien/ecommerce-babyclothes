@@ -12,10 +12,13 @@ namespace ecommerce_shop.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Tbl_MemberRole
+    public partial class Order
     {
-        public int MemberRoleID { get; set; }
-        public Nullable<int> MemberId { get; set; }
-        public Nullable<int> RoleId { get; set; }
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public Nullable<int> ProductId { get; set; }
+        public Nullable<double> Price { get; set; }
+        public Nullable<int> Status { get; set; }
+        public Nullable<System.DateTime> CreatedOnUtc { get; set; }
     }
 }

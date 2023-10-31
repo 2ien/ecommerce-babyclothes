@@ -12,16 +12,16 @@ namespace ecommerce_shop.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Tbl_ShippingDetails
+    public partial class Category
     {
-        public int ShippingDetailId { get; set; }
-        public Nullable<int> MemberId { get; set; }
-        public string Adress { get; set; }
-        public string City { get; set; }
-        public Nullable<int> OrderId { get; set; }
-        public Nullable<decimal> AmountPaid { get; set; }
-        public string PaymentType { get; set; }
-    
-        public virtual Tbl_Members Tbl_Members { get; set; }
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public string Avatar { get; set; }
+        public string slug { get; set; }
+        public Nullable<bool> ShowOnHomePage { get; set; }
+        public Nullable<int> DisplayOrder { get; set; }
+        public Nullable<bool> Deleted { get; set; }
+        public Nullable<System.DateTime> CreateOnUtc { get; set; }
+        public Nullable<System.DateTime> UpdatedOnUtc { get; set; }
     }
 }
