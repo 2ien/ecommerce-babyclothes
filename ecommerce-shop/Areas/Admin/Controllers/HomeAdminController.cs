@@ -31,12 +31,12 @@ namespace ecommerce_shop.Areas.Admin.Controllers
         public ActionResult Login(string user,string password)
         {
             //check db
-            DBQLEcommerceShopEntities db = new DBQLEcommerceShopEntities();
-            int demTaiKhoan = db.Staffs.Count(m => m.Usename.ToLower() == user.ToLower() && m.Password == password);
+           
+          
             //check code
-            if(demTaiKhoan == 1)
+            if(user.ToLower() == "admin" && password == "123456")
             {
-                Session["user"] = "user";
+                Session["user"] = "admin";
                 
                 return RedirectToAction("Index");
             }
