@@ -9,7 +9,7 @@ namespace ecommerce_shop.Controllers
     public class ProductController : Controller
     {
         // GET: Product
-        public ActionResult Index()
+        public ActionResult Detail()
         {
             return View();
         }

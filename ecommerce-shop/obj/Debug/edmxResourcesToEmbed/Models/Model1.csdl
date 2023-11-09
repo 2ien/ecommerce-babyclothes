@@ -1,138 +1,237 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="DBQLEcommerceShopModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityContainer Name="DBQLEcommerceShopEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Decentralizeds" EntityType="DBQLEcommerceShopModel.Decentralized" />
-    <EntitySet Name="Functions" EntityType="DBQLEcommerceShopModel.Function" />
-    <EntitySet Name="Staffs" EntityType="DBQLEcommerceShopModel.Staff" />
-    <AssociationSet Name="FK_Decentralized_Function" Association="DBQLEcommerceShopModel.FK_Decentralized_Function">
-      <End Role="Function" EntitySet="Functions" />
-      <End Role="Decentralized" EntitySet="Decentralizeds" />
+    <EntitySet Name="ChucNangs" EntityType="DBQLEcommerceShopModel.ChucNang" />
+    <EntitySet Name="NhanViens" EntityType="DBQLEcommerceShopModel.NhanVien" />
+    <EntitySet Name="PhanQuyens" EntityType="DBQLEcommerceShopModel.PhanQuyen" />
+    <AssociationSet Name="FK_PhanQuyen_ChucNang" Association="DBQLEcommerceShopModel.FK_PhanQuyen_ChucNang">
+      <End Role="ChucNang" EntitySet="ChucNangs" />
+      <End Role="PhanQuyen" EntitySet="PhanQuyens" />
     </AssociationSet>
-    <AssociationSet Name="FK_Decentralized_Staff" Association="DBQLEcommerceShopModel.FK_Decentralized_Staff">
-      <End Role="Staff" EntitySet="Staffs" />
-      <End Role="Decentralized" EntitySet="Decentralizeds" />
+    <AssociationSet Name="FK_PhanQuyen_NhanVien" Association="DBQLEcommerceShopModel.FK_PhanQuyen_NhanVien">
+      <End Role="NhanVien" EntitySet="NhanViens" />
+      <End Role="PhanQuyen" EntitySet="PhanQuyens" />
     </AssociationSet>
-    <EntitySet Name="Categories" EntityType="DBQLEcommerceShopModel.Category" />
-    <EntitySet Name="Orders" EntityType="DBQLEcommerceShopModel.Order" />
-    <EntitySet Name="Products" EntityType="DBQLEcommerceShopModel.Product" />
     <EntitySet Name="Users" EntityType="DBQLEcommerceShopModel.User" />
+    <EntitySet Name="NhaCungCaps" EntityType="DBQLEcommerceShopModel.NhaCungCap" />
+    <EntitySet Name="sysdiagrams" EntityType="DBQLEcommerceShopModel.sysdiagram" />
+    <EntitySet Name="ChatLieux" EntityType="DBQLEcommerceShopModel.ChatLieu" />
+    <EntitySet Name="ChiTietHoaDons" EntityType="DBQLEcommerceShopModel.ChiTietHoaDon" />
+    <EntitySet Name="HoaDons" EntityType="DBQLEcommerceShopModel.HoaDon" />
+    <EntitySet Name="KhachHangs" EntityType="DBQLEcommerceShopModel.KhachHang" />
+    <EntitySet Name="SanPhams" EntityType="DBQLEcommerceShopModel.SanPham" />
+    <AssociationSet Name="FK__SanPham__GhiChu__0697FACD" Association="DBQLEcommerceShopModel.FK__SanPham__GhiChu__0697FACD">
+      <End Role="ChatLieu" EntitySet="ChatLieux" />
+      <End Role="SanPham" EntitySet="SanPhams" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ChiTietHo__idHoa__0D44F85C" Association="DBQLEcommerceShopModel.FK__ChiTietHo__idHoa__0D44F85C">
+      <End Role="HoaDon" EntitySet="HoaDons" />
+      <End Role="ChiTietHoaDon" EntitySet="ChiTietHoaDons" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ChiTietHo__Thanh__0C50D423" Association="DBQLEcommerceShopModel.FK__ChiTietHo__Thanh__0C50D423">
+      <End Role="SanPham" EntitySet="SanPhams" />
+      <End Role="ChiTietHoaDon" EntitySet="ChiTietHoaDons" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HoaDon__TongTien__09746778" Association="DBQLEcommerceShopModel.FK__HoaDon__TongTien__09746778">
+      <End Role="KhachHang" EntitySet="KhachHangs" />
+      <End Role="HoaDon" EntitySet="HoaDons" />
+    </AssociationSet>
   </EntityContainer>
-  <EntityType Name="Decentralized">
-    <Key>
-      <PropertyRef Name="idStaff" />
-      <PropertyRef Name="idFunction" />
-    </Key>
-    <Property Name="idStaff" Type="Int32" Nullable="false" />
-    <Property Name="idFunction" Type="Int32" Nullable="false" />
-    <Property Name="Comment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Function" Relationship="DBQLEcommerceShopModel.FK_Decentralized_Function" FromRole="Decentralized" ToRole="Function" />
-    <NavigationProperty Name="Staff" Relationship="DBQLEcommerceShopModel.FK_Decentralized_Staff" FromRole="Decentralized" ToRole="Staff" />
-  </EntityType>
-  <EntityType Name="Function">
+  <EntityType Name="ChucNang">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="FunctionName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="FunctionCode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Decentralizeds" Relationship="DBQLEcommerceShopModel.FK_Decentralized_Function" FromRole="Function" ToRole="Decentralized" />
+    <Property Name="TenChucNang" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MaChucNang" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="PhanQuyens" Relationship="DBQLEcommerceShopModel.FK_PhanQuyen_ChucNang" FromRole="ChucNang" ToRole="PhanQuyen" />
   </EntityType>
-  <EntityType Name="Staff">
+  <EntityType Name="NhanVien">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Usename" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="StaffName" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-    <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Birthday" Type="DateTime" Precision="0" />
-    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="idEmployeeClassification" Type="Int32" />
-    <Property Name="EmployeePosition" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Decentralizeds" Relationship="DBQLEcommerceShopModel.FK_Decentralized_Staff" FromRole="Staff" ToRole="Decentralized" />
+    <Property Name="Username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TenNhanVien" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SDT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NgaySinh" Type="DateTime" Precision="0" />
+    <Property Name="idLoaiNhanVien" Type="Int32" />
+    <Property Name="ChucVu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="PhanQuyens" Relationship="DBQLEcommerceShopModel.FK_PhanQuyen_NhanVien" FromRole="NhanVien" ToRole="PhanQuyen" />
   </EntityType>
-  <Association Name="FK_Decentralized_Function">
-    <End Type="DBQLEcommerceShopModel.Function" Role="Function" Multiplicity="1">
+  <EntityType Name="PhanQuyen">
+    <Key>
+      <PropertyRef Name="idNhanVien" />
+      <PropertyRef Name="idChucNang" />
+    </Key>
+    <Property Name="idNhanVien" Type="Int32" Nullable="false" />
+    <Property Name="idChucNang" Type="Int32" Nullable="false" />
+    <Property Name="GhiChu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ChucNang" Relationship="DBQLEcommerceShopModel.FK_PhanQuyen_ChucNang" FromRole="PhanQuyen" ToRole="ChucNang" />
+    <NavigationProperty Name="NhanVien" Relationship="DBQLEcommerceShopModel.FK_PhanQuyen_NhanVien" FromRole="PhanQuyen" ToRole="NhanVien" />
+  </EntityType>
+  <Association Name="FK_PhanQuyen_ChucNang">
+    <End Type="DBQLEcommerceShopModel.ChucNang" Role="ChucNang" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Type="DBQLEcommerceShopModel.Decentralized" Role="Decentralized" Multiplicity="*" />
+    <End Type="DBQLEcommerceShopModel.PhanQuyen" Role="PhanQuyen" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Function">
+      <Principal Role="ChucNang">
         <PropertyRef Name="ID" />
       </Principal>
-      <Dependent Role="Decentralized">
-        <PropertyRef Name="idFunction" />
+      <Dependent Role="PhanQuyen">
+        <PropertyRef Name="idChucNang" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Decentralized_Staff">
-    <End Type="DBQLEcommerceShopModel.Staff" Role="Staff" Multiplicity="1">
+  <Association Name="FK_PhanQuyen_NhanVien">
+    <End Type="DBQLEcommerceShopModel.NhanVien" Role="NhanVien" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
-    <End Type="DBQLEcommerceShopModel.Decentralized" Role="Decentralized" Multiplicity="*" />
+    <End Type="DBQLEcommerceShopModel.PhanQuyen" Role="PhanQuyen" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Staff">
+      <Principal Role="NhanVien">
         <PropertyRef Name="ID" />
       </Principal>
-      <Dependent Role="Decentralized">
-        <PropertyRef Name="idStaff" />
+      <Dependent Role="PhanQuyen">
+        <PropertyRef Name="idNhanVien" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityType Name="Category">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="Avatar" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
-    <Property Name="slug" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="ShowOnHomePage" Type="Boolean" />
-    <Property Name="DisplayOrder" Type="Int32" />
-    <Property Name="Deleted" Type="Boolean" />
-    <Property Name="CreateOnUtc" Type="DateTime" Precision="3" />
-    <Property Name="UpdatedOnUtc" Type="DateTime" Precision="3" />
-  </EntityType>
-  <EntityType Name="Order">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="ProductId" Type="Int32" />
-    <Property Name="Price" Type="Double" />
-    <Property Name="Status" Type="Int32" />
-    <Property Name="CreatedOnUtc" Type="DateTime" Precision="3" />
-  </EntityType>
-  <EntityType Name="Product">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="Avatar" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
-    <Property Name="CategoryId" Type="Int32" />
-    <Property Name="ShortDes" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="FullDesciption" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-    <Property Name="Price" Type="Decimal" Precision="18" Scale="0" />
-    <Property Name="PriceDiscount" Type="Decimal" Precision="18" Scale="0" />
-    <Property Name="TypeId" Type="Int32" />
-    <Property Name="slug" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Deleted" Type="Boolean" />
-    <Property Name="ShowOnHomePage" Type="Boolean" />
-    <Property Name="DisplayOrder" Type="Int32" />
-    <Property Name="CreatedOnUtc" Type="DateTime" Precision="3" />
-    <Property Name="UpdatedOnUtc" Type="DateTime" Precision="3" />
-  </EntityType>
   <EntityType Name="User">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="Int32" Nullable="false" />
-    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="IsAdmin" Type="Boolean" />
+    <Property Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+    <Property Name="Username" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" Type="String" />
+    <Property Name="Password" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="Email" MaxLength="200" FixedLength="false" Unicode="false" Type="String" />
+    <Property Name="HoVaTen" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="SoDienThoai" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
   </EntityType>
+  <EntityType Name="NhaCungCap">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="TenNhaCungCap" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChiNhaCungCap" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="ChatLieu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenChatLieu" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SanPhams" Relationship="DBQLEcommerceShopModel.FK__SanPham__GhiChu__0697FACD" FromRole="ChatLieu" ToRole="SanPham" />
+  </EntityType>
+  <EntityType Name="ChiTietHoaDon">
+    <Key>
+      <PropertyRef Name="idHoaDon" />
+      <PropertyRef Name="idSanPham" />
+    </Key>
+    <Property Name="idHoaDon" Type="Int32" Nullable="false" />
+    <Property Name="idSanPham" Type="Int32" Nullable="false" />
+    <Property Name="SoLuong" Type="Int32" Nullable="false" />
+    <Property Name="DonGia" Type="Int32" Nullable="false" />
+    <Property Name="GiamGia" Type="Int32" Nullable="false" />
+    <Property Name="ThanhTien" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="HoaDon" Relationship="DBQLEcommerceShopModel.FK__ChiTietHo__idHoa__0D44F85C" FromRole="ChiTietHoaDon" ToRole="HoaDon" />
+    <NavigationProperty Name="SanPham" Relationship="DBQLEcommerceShopModel.FK__ChiTietHo__Thanh__0C50D423" FromRole="ChiTietHoaDon" ToRole="SanPham" />
+  </EntityType>
+  <EntityType Name="HoaDon">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idNhanVien" Type="Int32" />
+    <Property Name="NgayBan" Type="DateTime" Precision="3" />
+    <Property Name="idKhachHang" Type="Int32" Nullable="false" />
+    <Property Name="TongTien" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ChiTietHoaDons" Relationship="DBQLEcommerceShopModel.FK__ChiTietHo__idHoa__0D44F85C" FromRole="HoaDon" ToRole="ChiTietHoaDon" />
+    <NavigationProperty Name="KhachHang" Relationship="DBQLEcommerceShopModel.FK__HoaDon__TongTien__09746778" FromRole="HoaDon" ToRole="KhachHang" />
+  </EntityType>
+  <EntityType Name="KhachHang">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenKhach" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChi" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="SoDienThoai" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HoaDons" Relationship="DBQLEcommerceShopModel.FK__HoaDon__TongTien__09746778" FromRole="KhachHang" ToRole="HoaDon" />
+  </EntityType>
+  <EntityType Name="SanPham">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenSanPham" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="idChatLieu" Type="Int32" Nullable="false" />
+    <Property Name="SoLuong" Type="Int32" Nullable="false" />
+    <Property Name="GiaBan" Type="Int32" Nullable="false" />
+    <Property Name="HinhAnh" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="GhiChu" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ChatLieu" Relationship="DBQLEcommerceShopModel.FK__SanPham__GhiChu__0697FACD" FromRole="SanPham" ToRole="ChatLieu" />
+    <NavigationProperty Name="ChiTietHoaDons" Relationship="DBQLEcommerceShopModel.FK__ChiTietHo__Thanh__0C50D423" FromRole="SanPham" ToRole="ChiTietHoaDon" />
+  </EntityType>
+  <Association Name="FK__SanPham__GhiChu__0697FACD">
+    <End Type="DBQLEcommerceShopModel.ChatLieu" Role="ChatLieu" Multiplicity="1" />
+    <End Type="DBQLEcommerceShopModel.SanPham" Role="SanPham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChatLieu">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SanPham">
+        <PropertyRef Name="idChatLieu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ChiTietHo__idHoa__0D44F85C">
+    <End Type="DBQLEcommerceShopModel.HoaDon" Role="HoaDon" Multiplicity="1" />
+    <End Type="DBQLEcommerceShopModel.ChiTietHoaDon" Role="ChiTietHoaDon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HoaDon">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ChiTietHoaDon">
+        <PropertyRef Name="idHoaDon" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ChiTietHo__Thanh__0C50D423">
+    <End Type="DBQLEcommerceShopModel.SanPham" Role="SanPham" Multiplicity="1" />
+    <End Type="DBQLEcommerceShopModel.ChiTietHoaDon" Role="ChiTietHoaDon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SanPham">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ChiTietHoaDon">
+        <PropertyRef Name="idSanPham" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HoaDon__TongTien__09746778">
+    <End Type="DBQLEcommerceShopModel.KhachHang" Role="KhachHang" Multiplicity="1" />
+    <End Type="DBQLEcommerceShopModel.HoaDon" Role="HoaDon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhachHang">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HoaDon">
+        <PropertyRef Name="idKhachHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

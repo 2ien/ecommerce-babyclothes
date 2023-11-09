@@ -1,0 +1,40 @@
+﻿@model IEnumerable<ecommerce_shop.Models.NhaCungCap>
+
+@{
+    ViewBag.Title = "DanhSach";
+    Layout = "~/Areas/Admin/Views/Shared/_layout-admin.cshtml";
+}
+
+<h2>DanhSach</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TenNhaCungCap)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DiaChiNhaCungCap)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenNhaCungCap)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DiaChiNhaCungCap)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

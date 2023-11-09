@@ -28,23 +28,26 @@ namespace ecommerce_shop.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public ActionResult Login(string user,string password)
+        public ActionResult Login(string username, string password)
         {
             //check db
-           
-          
-            //check code
-            if(user.ToLower() == "admin" && password == "123456")
+            if (string.IsNullOrEmpty(username) == true | string.IsNullOrEmpty(password) == true)
             {
-                Session["user"] = "admin";
-                
-                return RedirectToAction("Index");
-            }
-            else
-            {
-                TempData["error"] = "Tài khoản đăng nhập không đúng";
+                TempData["Error"] = "Chưa nhập thông tin";
                 return View();
             }
+            DBQLEcommerceShopEntities db = new DBQLEcommerceShopEntities();
+            var user = db.NhanViens.SingleOrDefault(m => m.Username.ToLower() == username.ToLower()); ;
+            //check tài khoản,check mật khẩu 
+            if (user == null || user.Password != password)
+            {
+                TempData["Error"] = "Tài khoản không tồn tại hoặc mật khẩu không đúng";
+                return View();
+            }    
+            //Lưu session
+            Session["user"] = user;
+            return RedirectToAction("Index"); 
+
         }
         public ActionResult Logout()
         {

@@ -1,144 +1,225 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="DBQLEcommerceShopModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <EntityType Name="Category">
+  <EntityType Name="ChatLieu">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Name" Type="nvarchar" MaxLength="100" />
-    <Property Name="Avatar" Type="nchar" MaxLength="100" />
-    <Property Name="slug" Type="varchar" MaxLength="100" />
-    <Property Name="ShowOnHomePage" Type="bit" />
-    <Property Name="DisplayOrder" Type="int" />
-    <Property Name="Deleted" Type="bit" />
-    <Property Name="CreateOnUtc" Type="datetime" />
-    <Property Name="UpdatedOnUtc" Type="datetime" />
+    <Property Name="TenChatLieu" Type="nvarchar" MaxLength="200" Nullable="false" />
   </EntityType>
-  <EntityType Name="Decentralized">
+  <EntityType Name="ChiTietHoaDon">
     <Key>
-      <PropertyRef Name="idStaff" />
-      <PropertyRef Name="idFunction" />
+      <PropertyRef Name="idHoaDon" />
+      <PropertyRef Name="idSanPham" />
     </Key>
-    <Property Name="idStaff" Type="int" Nullable="false" />
-    <Property Name="idFunction" Type="int" Nullable="false" />
-    <Property Name="Comment" Type="nvarchar" MaxLength="50" />
+    <Property Name="idHoaDon" Type="int" Nullable="false" />
+    <Property Name="idSanPham" Type="int" Nullable="false" />
+    <Property Name="SoLuong" Type="int" Nullable="false" />
+    <Property Name="DonGia" Type="int" Nullable="false" />
+    <Property Name="GiamGia" Type="int" Nullable="false" />
+    <Property Name="ThanhTien" Type="int" Nullable="false" />
   </EntityType>
-  <EntityType Name="Function">
+  <EntityType Name="ChucNang">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="FunctionName" Type="nvarchar" MaxLength="100" />
-    <Property Name="FunctionCode" Type="nvarchar" MaxLength="100" />
+    <Property Name="TenChucNang" Type="nvarchar" MaxLength="100" />
+    <Property Name="MaChucNang" Type="nvarchar" MaxLength="100" />
   </EntityType>
-  <EntityType Name="Order">
+  <EntityType Name="HoaDon">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Name" Type="nvarchar" MaxLength="100" />
-    <Property Name="ProductId" Type="int" />
-    <Property Name="Price" Type="float" />
-    <Property Name="Status" Type="int" />
-    <Property Name="CreatedOnUtc" Type="datetime" />
+    <Property Name="idNhanVien" Type="int" />
+    <Property Name="NgayBan" Type="datetime" />
+    <Property Name="idKhachHang" Type="int" Nullable="false" />
+    <Property Name="TongTien" Type="int" Nullable="false" />
   </EntityType>
-  <EntityType Name="Product">
+  <EntityType Name="KhachHang">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Name" Type="nvarchar" MaxLength="100" />
-    <Property Name="Avatar" Type="nchar" MaxLength="100" />
-    <Property Name="CategoryId" Type="int" />
-    <Property Name="ShortDes" Type="nvarchar" MaxLength="100" />
-    <Property Name="FullDesciption" Type="nvarchar" MaxLength="500" />
-    <Property Name="Price" Type="decimal" Precision="18" Scale="0" />
-    <Property Name="PriceDiscount" Type="decimal" Precision="18" Scale="0" />
-    <Property Name="TypeId" Type="int" />
-    <Property Name="slug" Type="varchar" MaxLength="50" />
-    <Property Name="Deleted" Type="bit" />
-    <Property Name="ShowOnHomePage" Type="bit" />
-    <Property Name="DisplayOrder" Type="int" />
-    <Property Name="CreatedOnUtc" Type="datetime" />
-    <Property Name="UpdatedOnUtc" Type="datetime" />
+    <Property Name="TenKhach" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="DiaChi" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="SoDienThoai" Type="nvarchar" MaxLength="30" Nullable="false" />
   </EntityType>
-  <EntityType Name="Staff">
+  <EntityType Name="NhaCungCap">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Usename" Type="varchar" MaxLength="50" />
-    <Property Name="Password" Type="varchar" MaxLength="50" />
-    <Property Name="StaffName" Type="nvarchar" MaxLength="10" />
-    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="50" />
-    <Property Name="Birthday" Type="date" />
-    <Property Name="Address" Type="nvarchar" MaxLength="50" />
-    <Property Name="idEmployeeClassification" Type="int" />
-    <Property Name="EmployeePosition" Type="nvarchar" MaxLength="50" />
+    <Property Name="TenNhaCungCap" Type="nvarchar" MaxLength="200" />
+    <Property Name="DiaChiNhaCungCap" Type="nvarchar" MaxLength="200" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'DBQLEcommerceShop.dbo.User' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="NhanVien">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TenNhanVien" Type="nvarchar" MaxLength="50" />
+    <Property Name="SDT" Type="nvarchar" MaxLength="50" />
+    <Property Name="NgaySinh" Type="date" />
+    <Property Name="idLoaiNhanVien" Type="int" />
+    <Property Name="ChucVu" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PhanQuyen">
+    <Key>
+      <PropertyRef Name="idNhanVien" />
+      <PropertyRef Name="idChucNang" />
+    </Key>
+    <Property Name="idNhanVien" Type="int" Nullable="false" />
+    <Property Name="idChucNang" Type="int" Nullable="false" />
+    <Property Name="GhiChu" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SanPham">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenSanPham" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="idChatLieu" Type="int" Nullable="false" />
+    <Property Name="SoLuong" Type="int" Nullable="false" />
+    <Property Name="GiaBan" Type="int" Nullable="false" />
+    <Property Name="HinhAnh" Type="nvarchar" MaxLength="200" />
+    <Property Name="GhiChu" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
   <EntityType Name="User">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="int" Nullable="false" />
-    <Property Name="Username" Type="varchar" MaxLength="50" />
-    <Property Name="Email" Type="varchar" MaxLength="50" />
-    <Property Name="Password" Type="varchar" MaxLength="50" />
-    <Property Name="IsAdmin" Type="bit" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="200" />
+    <Property Name="HoVaTen" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="SoDienThoai" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
-  <Association Name="FK_Decentralized_Function">
-    <End Role="Function" Type="Self.Function" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="Decentralized" Type="Self.Decentralized" Multiplicity="*" />
+  <Association Name="FK__ChiTietHo__idHoa__0D44F85C">
+    <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="1" />
+    <End Role="ChiTietHoaDon" Type="Self.ChiTietHoaDon" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Function">
+      <Principal Role="HoaDon">
         <PropertyRef Name="ID" />
       </Principal>
-      <Dependent Role="Decentralized">
-        <PropertyRef Name="idFunction" />
+      <Dependent Role="ChiTietHoaDon">
+        <PropertyRef Name="idHoaDon" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Decentralized_Staff">
-    <End Role="Staff" Type="Self.Staff" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="Decentralized" Type="Self.Decentralized" Multiplicity="*" />
+  <Association Name="FK__ChiTietHo__Thanh__0C50D423">
+    <End Role="SanPham" Type="Self.SanPham" Multiplicity="1" />
+    <End Role="ChiTietHoaDon" Type="Self.ChiTietHoaDon" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Staff">
+      <Principal Role="SanPham">
         <PropertyRef Name="ID" />
       </Principal>
-      <Dependent Role="Decentralized">
-        <PropertyRef Name="idStaff" />
+      <Dependent Role="ChiTietHoaDon">
+        <PropertyRef Name="idSanPham" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HoaDon__TongTien__09746778">
+    <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="1" />
+    <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhachHang">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HoaDon">
+        <PropertyRef Name="idKhachHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SanPham__GhiChu__0697FACD">
+    <End Role="ChatLieu" Type="Self.ChatLieu" Multiplicity="1" />
+    <End Role="SanPham" Type="Self.SanPham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChatLieu">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SanPham">
+        <PropertyRef Name="idChatLieu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PhanQuyen_ChucNang">
+    <End Role="ChucNang" Type="Self.ChucNang" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PhanQuyen" Type="Self.PhanQuyen" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChucNang">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PhanQuyen">
+        <PropertyRef Name="idChucNang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PhanQuyen_NhanVien">
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PhanQuyen" Type="Self.PhanQuyen" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhanVien">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PhanQuyen">
+        <PropertyRef Name="idNhanVien" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="DBQLEcommerceShopModelStoreContainer">
-    <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Decentralized" EntityType="Self.Decentralized" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Function" EntityType="Self.Function" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Staff" EntityType="Self.Staff" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="User" EntityType="Self.User" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [User].[ID] AS [ID], 
-    [User].[Username] AS [Username], 
-    [User].[Email] AS [Email], 
-    [User].[Password] AS [Password], 
-    [User].[IsAdmin] AS [IsAdmin]
-    FROM [dbo].[User] AS [User]</DefiningQuery>
-    </EntitySet>
-    <AssociationSet Name="FK_Decentralized_Function" Association="Self.FK_Decentralized_Function">
-      <End Role="Function" EntitySet="Function" />
-      <End Role="Decentralized" EntitySet="Decentralized" />
+    <EntitySet Name="ChatLieu" EntityType="Self.ChatLieu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ChiTietHoaDon" EntityType="Self.ChiTietHoaDon" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ChucNang" EntityType="Self.ChucNang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HoaDon" EntityType="Self.HoaDon" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KhachHang" EntityType="Self.KhachHang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NhaCungCap" EntityType="Self.NhaCungCap" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NhanVien" EntityType="Self.NhanVien" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PhanQuyen" EntityType="Self.PhanQuyen" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SanPham" EntityType="Self.SanPham" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__ChiTietHo__idHoa__0D44F85C" Association="Self.FK__ChiTietHo__idHoa__0D44F85C">
+      <End Role="HoaDon" EntitySet="HoaDon" />
+      <End Role="ChiTietHoaDon" EntitySet="ChiTietHoaDon" />
     </AssociationSet>
-    <AssociationSet Name="FK_Decentralized_Staff" Association="Self.FK_Decentralized_Staff">
-      <End Role="Staff" EntitySet="Staff" />
-      <End Role="Decentralized" EntitySet="Decentralized" />
+    <AssociationSet Name="FK__ChiTietHo__Thanh__0C50D423" Association="Self.FK__ChiTietHo__Thanh__0C50D423">
+      <End Role="SanPham" EntitySet="SanPham" />
+      <End Role="ChiTietHoaDon" EntitySet="ChiTietHoaDon" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HoaDon__TongTien__09746778" Association="Self.FK__HoaDon__TongTien__09746778">
+      <End Role="KhachHang" EntitySet="KhachHang" />
+      <End Role="HoaDon" EntitySet="HoaDon" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SanPham__GhiChu__0697FACD" Association="Self.FK__SanPham__GhiChu__0697FACD">
+      <End Role="ChatLieu" EntitySet="ChatLieu" />
+      <End Role="SanPham" EntitySet="SanPham" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PhanQuyen_ChucNang" Association="Self.FK_PhanQuyen_ChucNang">
+      <End Role="ChucNang" EntitySet="ChucNang" />
+      <End Role="PhanQuyen" EntitySet="PhanQuyen" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PhanQuyen_NhanVien" Association="Self.FK_PhanQuyen_NhanVien">
+      <End Role="NhanVien" EntitySet="NhanVien" />
+      <End Role="PhanQuyen" EntitySet="PhanQuyen" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

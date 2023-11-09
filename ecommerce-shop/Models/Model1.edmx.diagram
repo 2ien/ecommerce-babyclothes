@@ -4,17 +4,25 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="28c0b341bfab4473a3e2968014ff0a49" Name="Diagram1" ZoomLevel="72">
-        <EntityTypeShape EntityType="DBQLEcommerceShopModel.Decentralized" Width="1.5" PointX="5.125" PointY="1" />
-        <EntityTypeShape EntityType="DBQLEcommerceShopModel.Function" Width="1.5" PointX="2.875" PointY="5" />
-        <EntityTypeShape EntityType="DBQLEcommerceShopModel.Staff" Width="1.5" PointX="2.875" PointY="0.5" />
-        <AssociationConnector Association="DBQLEcommerceShopModel.FK_Decentralized_Function" />
-        <AssociationConnector Association="DBQLEcommerceShopModel.FK_Decentralized_Staff" />
-        <EntityTypeShape EntityType="DBQLEcommerceShopModel.Category" Width="1.5" PointX="13.375" PointY="1.625" />
-        <EntityTypeShape EntityType="DBQLEcommerceShopModel.Order" Width="1.5" PointX="17.25" PointY="2.5" />
-        <EntityTypeShape EntityType="DBQLEcommerceShopModel.Product" Width="1.5" PointX="8.375" PointY="2.125" />
-        <EntityTypeShape EntityType="DBQLEcommerceShopModel.User" Width="1.5" PointX="10.875" PointY="2.5" />
-      </Diagram>
+      <Diagram DiagramId="28c0b341bfab4473a3e2968014ff0a49" Name="Diagram1" ZoomLevel="53">
+        <EntityTypeShape EntityType="DBQLEcommerceShopModel.ChucNang" Width="1.5" PointX="5.375" PointY="6.875" />
+        <EntityTypeShape EntityType="DBQLEcommerceShopModel.NhanVien" Width="1.5" PointX="0.75" PointY="2.5" />
+        <EntityTypeShape EntityType="DBQLEcommerceShopModel.PhanQuyen" Width="1.5" PointX="3.25" PointY="4.125" />
+        <AssociationConnector Association="DBQLEcommerceShopModel.FK_PhanQuyen_ChucNang" />
+        <AssociationConnector Association="DBQLEcommerceShopModel.FK_PhanQuyen_NhanVien" />
+        <EntityTypeShape EntityType="DBQLEcommerceShopModel.User" PointX="5.75" PointY="1.25" Width="1.5" />
+        <EntityTypeShape EntityType="DBQLEcommerceShopModel.NhaCungCap" Width="1.5" PointX="17.125" PointY="2.5" />
+        <EntityTypeShape EntityType="DBQLEcommerceShopModel.sysdiagram" Width="1.5" PointX="7.5" PointY="4.125" />
+        <EntityTypeShape EntityType="DBQLEcommerceShopModel.ChatLieu" Width="1.5" PointX="10.125" PointY="1.75" />
+        <EntityTypeShape EntityType="DBQLEcommerceShopModel.ChiTietHoaDon" Width="1.5" PointX="14.875" PointY="1.25" />
+        <EntityTypeShape EntityType="DBQLEcommerceShopModel.HoaDon" Width="1.5" PointX="12.625" PointY="5.375" />
+        <EntityTypeShape EntityType="DBQLEcommerceShopModel.KhachHang" Width="1.5" PointX="10.375" PointY="5.625" />
+        <EntityTypeShape EntityType="DBQLEcommerceShopModel.SanPham" Width="1.5" PointX="12.625" PointY="1.25" />
+        <AssociationConnector Association="DBQLEcommerceShopModel.FK__SanPham__GhiChu__0697FACD" />
+        <AssociationConnector Association="DBQLEcommerceShopModel.FK__ChiTietHo__idHoa__0D44F85C" />
+        <AssociationConnector Association="DBQLEcommerceShopModel.FK__ChiTietHo__Thanh__0C50D423" />
+        <AssociationConnector Association="DBQLEcommerceShopModel.FK__HoaDon__TongTien__09746778" />
+        </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

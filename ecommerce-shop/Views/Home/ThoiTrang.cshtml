@@ -1,0 +1,36 @@
+﻿@model IEnumerable<ecommerce_shop.Models.SanPham>
+@{
+    ViewBag.Title = "ThoiTrang";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../Content/css/style.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                
+                <div class="list-pro col-sm-6 col-md-4 col-lg-3">
+                    <div class="product-card">
+                        <img src="@Url.Content(item.HinhAnh)" />
+                        <h4>Product Name</h4>
+                        <div>
+                            <span>@Html.DisplayFor(model => item.GiaBan)K</span>
+                            <button>+</button>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div> 
+</body>
+
+</html>
