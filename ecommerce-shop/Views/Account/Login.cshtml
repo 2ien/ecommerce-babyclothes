@@ -1,0 +1,44 @@
+﻿@model ecommerce_shop.Models.User
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link href="~/Content/css/StyleAccount.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="center">
+        <h1>Đăng Nhập</h1>
+        <div id="form-login">
+            @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+            {           
+                <div class="txt_field">
+                    <input type="text" name="Username" required>
+                    <span>
+                    </span>
+                    <label>Username</label>
+                 
+                </div>
+                <div class="txt_field">
+                    <input type="password" name="Password" required>
+                    <span>
+                    </span>
+                    <label>Password</label>
+                </div>             
+                <input type="submit" value="Đăng nhập">
+                          
+                <div class="signup_link">
+                    Bạn chưa là thành viên? <a href="~/Account/Register">Đăng ký</a>
+                </div>
+            }
+        </div>
+    </div>
+ 
+</body>
+</html>
+
+

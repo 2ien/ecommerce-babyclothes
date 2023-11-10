@@ -109,6 +109,7 @@
     <Property Name="Email" MaxLength="200" FixedLength="false" Unicode="false" Type="String" />
     <Property Name="HoVaTen" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" Type="String" />
     <Property Name="SoDienThoai" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+    <Property Name="RePassword" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="NhaCungCap">
     <Key>

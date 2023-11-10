@@ -131,7 +131,6 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
-    <Compile Include="Controllers\ThanhVienController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -244,6 +243,7 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\css\Style.css" />
+    <Content Include="Content\css\StyleAccount.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\fonts\fontawesome\css\all.css" />
     <Content Include="Content\fonts\fontawesome\css\all.min.css" />
@@ -263,6 +263,9 @@
     <Content Include="Content\fonts\fontawesome\webfonts\fa-regular-400.svg" />
     <Content Include="Content\fonts\fontawesome\webfonts\fa-solid-900.svg" />
     <Content Include="Content\fonts\roboto\font.css" />
+    <Content Include="Content\images\holyday.jpg" />
+    <Content Include="Content\images\pjset.jpg" />
+    <Content Include="Content\images\seasonfinalesale.jpg" />
     <Content Include="Content\imgs\181.jpg" />
     <Content Include="Content\imgs\8776719-removebg-preview.png" />
     <Content Include="Content\imgs\icons8-facebook-48.png" />
@@ -354,6 +357,7 @@
     <Content Include="Scripts\esm\popper.js.map" />
     <Content Include="Scripts\esm\popper-utils.min.js.map" />
     <Content Include="Scripts\esm\popper-utils.js.map" />
+    <Content Include="Content\images\banner_s23_newpjsets_750x1294.webp" />
     <None Include="Scripts\jquery-3.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.1.js" />
     <Content Include="Scripts\jquery-3.7.1.min.js" />
@@ -369,7 +373,6 @@
     <Content Include="Scripts\popper-utils.min.js" />
     <Content Include="Scripts\popper.js" />
     <Content Include="Scripts\popper.min.js" />
-    <Content Include="Scripts\ScriptAccount.js" />
     <Content Include="Scripts\src\index.js" />
     <Content Include="Scripts\src\methods\defaults.js" />
     <Content Include="Scripts\src\methods\destroy.js" />
@@ -452,8 +455,6 @@
     <Content Include="Views\Home\HuongDan.cshtml" />
     <Content Include="Views\Product\Detail.cshtml" />
     <Content Include="Views\Home\ThoiTrang.cshtml" />
-    <Content Include="Views\ThanhVien\Login.cshtml" />
-    <Content Include="Views\Account\Account.cshtml" />
     <Content Include="Scripts\umd\popper.min.js.map" />
     <Content Include="Scripts\umd\popper.js.map" />
     <Content Include="Scripts\umd\popper.js.flow" />
@@ -464,6 +465,9 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Home\IndexLogin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

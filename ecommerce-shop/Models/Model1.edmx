@@ -110,6 +110,7 @@
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Username" Type="varchar" MaxLength="200" Nullable="false" />
           <Property Name="Password" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="RePassword" Type="nvarchar" MaxLength="200" />
           <Property Name="Email" Type="varchar" MaxLength="200" />
           <Property Name="HoVaTen" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="SoDienThoai" Type="nvarchar" MaxLength="50" Nullable="false" />
@@ -340,6 +341,7 @@
           <Property Name="Email" MaxLength="200" FixedLength="false" Unicode="false" Type="String" />
           <Property Name="HoVaTen" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" Type="String" />
           <Property Name="SoDienThoai" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="RePassword" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="NhaCungCap">
           <Key>
@@ -506,6 +508,7 @@
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="DBQLEcommerceShopModel.User">
               <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="RePassword" ColumnName="RePassword" />
                 <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />
                 <ScalarProperty Name="HoVaTen" ColumnName="HoVaTen" />
                 <ScalarProperty Name="Email" ColumnName="Email" />

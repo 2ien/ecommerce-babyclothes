@@ -105,6 +105,7 @@
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Username" Type="varchar" MaxLength="200" Nullable="false" />
     <Property Name="Password" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="RePassword" Type="nvarchar" MaxLength="200" />
     <Property Name="Email" Type="varchar" MaxLength="200" />
     <Property Name="HoVaTen" Type="nvarchar" MaxLength="200" Nullable="false" />
     <Property Name="SoDienThoai" Type="nvarchar" MaxLength="50" Nullable="false" />

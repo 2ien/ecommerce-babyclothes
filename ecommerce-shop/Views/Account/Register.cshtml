@@ -1,0 +1,59 @@
+﻿@model ecommerce_shop.Models.User
+@{
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Register</title>
+    <link href="~/Content/css/StyleAccount.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="center">
+        <h1>Đăng Ký</h1>
+        <div id="form-login">
+            @using (Html.BeginForm("Register", "Account", FormMethod.Post))
+            {
+                <div class="txt_field">
+                    <input type="text" name="HoVaTen" required>
+                    <span></span>
+                    <label>Họ và Tên</label>
+                </div>
+                <div class="txt_field">
+                    <input type="text" name="Email" required>
+                    <span></span>
+                    <label>Email</label>
+                </div>
+                <div class="txt_field">
+                    <input type="text" name="SoDienThoai" required>
+                    <span></span>
+                    <label>Số điện thoại</label>
+                </div>
+                <div class="txt_field">
+                    <input type="text" name="Username" required>
+                    <span></span>
+                    <label>Tài khoản</label>
+                </div>
+                <div class="txt_field">
+                    <input type="password" name="Password" required>
+                    <span></span>
+                    <label>Mật khẩu</label>
+                </div>
+                <div class="txt_field">
+                    <input type="password" name="RePassword" required>
+                    <span></span>
+                    <label>Nhập lại mật khẩu</label>
+                </div>
+                <input type="submit" value="Đăng ký">
+                <div class="signup_link">
+                    Bạn là thành viên ?<a href="~/Account/Login">Đăng nhập</a>
+                </div>
+            }
+        </div>
+    </div>
+
+</body>
+</html>

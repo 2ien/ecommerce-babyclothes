@@ -17,6 +17,20 @@ namespace ecommerce_shop.Controllers
         {
             return View();
         }
+        public ActionResult IndexLogin()
+        {
+          
+            if (Session["Username"]!=null)
+            {
+                
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Login", "Account");
+            }
+            
+        }
         public ActionResult ThoiTrang()
         {
             return View(db.SanPhams.ToList());

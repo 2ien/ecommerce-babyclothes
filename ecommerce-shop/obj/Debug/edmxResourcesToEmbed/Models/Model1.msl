@@ -36,6 +36,7 @@
     <EntitySetMapping Name="Users">
       <EntityTypeMapping TypeName="DBQLEcommerceShopModel.User">
         <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="RePassword" ColumnName="RePassword" />
           <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />
           <ScalarProperty Name="HoVaTen" ColumnName="HoVaTen" />
           <ScalarProperty Name="Email" ColumnName="Email" />
