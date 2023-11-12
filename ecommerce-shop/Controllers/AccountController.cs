@@ -23,8 +23,7 @@ namespace ecommerce_shop.Controllers
         {
             var check = db.Users.Where(s=>s.Username.Equals(user.Username)&&s.Password.Equals(user.Password)).FirstOrDefault();
             if(check == null)
-            {
-                user.LoginErrorMessage = "Tài khoản hoặc mật khẩu sai";
+            {            
                 return View("Login",user);
             }
             else

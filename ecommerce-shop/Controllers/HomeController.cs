@@ -7,7 +7,8 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Web;
 using System.Web.Mvc;
-
+using X.PagedList;
+using PagedList;
 namespace ecommerce_shop.Controllers
 {
     public class HomeController : Controller
@@ -17,23 +18,16 @@ namespace ecommerce_shop.Controllers
         {
             return View();
         }
-        public ActionResult IndexLogin()
+        public ActionResult ThoiTrang(int? page)
         {
-          
-            if (Session["Username"]!=null)
+            var pageSize = 10;
+            if(page == null)
             {
-                
-                return View();
+                page = 1;
             }
-            else
-            {
-                return RedirectToAction("Login", "Account");
-            }
-            
-        }
-        public ActionResult ThoiTrang()
-        {
-            return View(db.SanPhams.ToList());
+            var pageThoiTrang = page.HasValue?Convert.ToInt32(page) : 1;
+            var items = db.SanPhams.OrderByDescending(x => x.ID).ToPagedList(pageThoiTrang,pageSize);
+            return View(items);
         }
         public ActionResult HuongDan()
         {

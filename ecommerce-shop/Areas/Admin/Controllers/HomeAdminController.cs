@@ -12,6 +12,7 @@ namespace ecommerce_shop.Areas.Admin.Controllers
 {
     public class HomeAdminController : Controller
     {
+        DBQLEcommerceShopEntities db = new DBQLEcommerceShopEntities();
         // GET: Admin/HomeAdmin
         public ActionResult Index()
         {
@@ -58,5 +59,6 @@ namespace ecommerce_shop.Areas.Admin.Controllers
             //Trả về login
             return RedirectToAction("Login");
         }
+       
     }
 }

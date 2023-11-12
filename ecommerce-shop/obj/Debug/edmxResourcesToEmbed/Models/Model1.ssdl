@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="DBQLEcommerceShopModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <EntityType Name="ChatLieu">
+  <EntityType Name="AnhSanPham">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="TenChatLieu" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="idSanPham" Type="int" Nullable="false" />
+    <Property Name="UrlAnh" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="ChiTietHoaDon">
     <Key>
@@ -37,22 +38,12 @@
     <Property Name="idKhachHang" Type="int" Nullable="false" />
     <Property Name="TongTien" Type="int" Nullable="false" />
   </EntityType>
-  <EntityType Name="KhachHang">
+  <EntityType Name="Kieu">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="TenKhach" Type="nvarchar" MaxLength="100" Nullable="false" />
-    <Property Name="DiaChi" Type="nvarchar" MaxLength="300" Nullable="false" />
-    <Property Name="SoDienThoai" Type="nvarchar" MaxLength="30" Nullable="false" />
-  </EntityType>
-  <EntityType Name="NhaCungCap">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="TenNhaCungCap" Type="nvarchar" MaxLength="200" />
-    <Property Name="DiaChiNhaCungCap" Type="nvarchar" MaxLength="200" />
+    <Property Name="TenKieu" Type="nvarchar" MaxLength="200" Nullable="false" />
   </EntityType>
   <EntityType Name="NhanVien">
     <Key>
@@ -82,11 +73,12 @@
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TenSanPham" Type="nvarchar" MaxLength="200" Nullable="false" />
-    <Property Name="idChatLieu" Type="int" Nullable="false" />
+    <Property Name="idKieu" Type="int" Nullable="false" />
     <Property Name="SoLuong" Type="int" Nullable="false" />
     <Property Name="GiaBan" Type="int" Nullable="false" />
     <Property Name="HinhAnh" Type="nvarchar" MaxLength="200" />
     <Property Name="GhiChu" Type="nvarchar" MaxLength="200" />
+    <Property Name="NgayTao" Type="datetime" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
@@ -134,27 +126,31 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__HoaDon__TongTien__09746778">
-    <End Role="KhachHang" Type="Self.KhachHang" Multiplicity="1" />
+  <Association Name="FK_AnhSanPham_SanPham">
+    <End Role="SanPham" Type="Self.SanPham" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AnhSanPham" Type="Self.AnhSanPham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SanPham">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="AnhSanPham">
+        <PropertyRef Name="idSanPham" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HoaDon_User">
+    <End Role="User" Type="Self.User" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="KhachHang">
+      <Principal Role="User">
         <PropertyRef Name="ID" />
       </Principal>
       <Dependent Role="HoaDon">
         <PropertyRef Name="idKhachHang" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__SanPham__GhiChu__0697FACD">
-    <End Role="ChatLieu" Type="Self.ChatLieu" Multiplicity="1" />
-    <End Role="SanPham" Type="Self.SanPham" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="ChatLieu">
-        <PropertyRef Name="ID" />
-      </Principal>
-      <Dependent Role="SanPham">
-        <PropertyRef Name="idChatLieu" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -186,13 +182,24 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_SanPham_Kieu">
+    <End Role="Kieu" Type="Self.Kieu" Multiplicity="1" />
+    <End Role="SanPham" Type="Self.SanPham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kieu">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SanPham">
+        <PropertyRef Name="idKieu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="DBQLEcommerceShopModelStoreContainer">
-    <EntitySet Name="ChatLieu" EntityType="Self.ChatLieu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AnhSanPham" EntityType="Self.AnhSanPham" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ChiTietHoaDon" EntityType="Self.ChiTietHoaDon" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ChucNang" EntityType="Self.ChucNang" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="HoaDon" EntityType="Self.HoaDon" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="KhachHang" EntityType="Self.KhachHang" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="NhaCungCap" EntityType="Self.NhaCungCap" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Kieu" EntityType="Self.Kieu" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="NhanVien" EntityType="Self.NhanVien" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PhanQuyen" EntityType="Self.PhanQuyen" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SanPham" EntityType="Self.SanPham" Schema="dbo" store:Type="Tables" />
@@ -206,13 +213,13 @@
       <End Role="SanPham" EntitySet="SanPham" />
       <End Role="ChiTietHoaDon" EntitySet="ChiTietHoaDon" />
     </AssociationSet>
-    <AssociationSet Name="FK__HoaDon__TongTien__09746778" Association="Self.FK__HoaDon__TongTien__09746778">
-      <End Role="KhachHang" EntitySet="KhachHang" />
-      <End Role="HoaDon" EntitySet="HoaDon" />
-    </AssociationSet>
-    <AssociationSet Name="FK__SanPham__GhiChu__0697FACD" Association="Self.FK__SanPham__GhiChu__0697FACD">
-      <End Role="ChatLieu" EntitySet="ChatLieu" />
+    <AssociationSet Name="FK_AnhSanPham_SanPham" Association="Self.FK_AnhSanPham_SanPham">
       <End Role="SanPham" EntitySet="SanPham" />
+      <End Role="AnhSanPham" EntitySet="AnhSanPham" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HoaDon_User" Association="Self.FK_HoaDon_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="HoaDon" EntitySet="HoaDon" />
     </AssociationSet>
     <AssociationSet Name="FK_PhanQuyen_ChucNang" Association="Self.FK_PhanQuyen_ChucNang">
       <End Role="ChucNang" EntitySet="ChucNang" />
@@ -221,6 +228,10 @@
     <AssociationSet Name="FK_PhanQuyen_NhanVien" Association="Self.FK_PhanQuyen_NhanVien">
       <End Role="NhanVien" EntitySet="NhanVien" />
       <End Role="PhanQuyen" EntitySet="PhanQuyen" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SanPham_Kieu" Association="Self.FK_SanPham_Kieu">
+      <End Role="Kieu" EntitySet="Kieu" />
+      <End Role="SanPham" EntitySet="SanPham" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

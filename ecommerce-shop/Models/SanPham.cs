@@ -17,19 +17,23 @@ namespace ecommerce_shop.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public SanPham()
         {
+            this.AnhSanPhams = new HashSet<AnhSanPham>();
             this.ChiTietHoaDons = new HashSet<ChiTietHoaDon>();
         }
     
         public int ID { get; set; }
         public string TenSanPham { get; set; }
-        public int idChatLieu { get; set; }
+        public int idKieu { get; set; }
         public int SoLuong { get; set; }
         public int GiaBan { get; set; }
         public string HinhAnh { get; set; }
         public string GhiChu { get; set; }
+        public Nullable<System.DateTime> NgayTao { get; set; }
     
-        public virtual ChatLieu ChatLieu { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<AnhSanPham> AnhSanPhams { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietHoaDon> ChiTietHoaDons { get; set; }
+        public virtual Kieu Kieu { get; set; }
     }
 }

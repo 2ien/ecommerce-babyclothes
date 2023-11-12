@@ -64,6 +64,67 @@ a {
     font-family: 'Sometype Mono', monospace;
     font-family: 'Work Sans', sans-serif;
 }
+/*shopping cart*/
+.itemside {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+}
+
+    .itemside .aside {
+        position: relative;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+    }
+
+    .itemside .info {
+        padding-left: 15px;
+        padding-right: 7px;
+    }
+
+    .itemside p {
+        margin-bottom: 0;
+    }
+
+    .itemside .title {
+        display: block;
+        margin-bottom: 5px;
+        color: #212529;
+    }
+
+    .itemside a.title:hover {
+        color: #ff6a00;
+    }
+.img-sm {
+    width: 80px;
+    height: 80px;
+}
+a.itemside {
+    color: initial;
+}
+
+.items-bordered-wrap .itemside:not(:last-child) {
+    border-bottom: 1px solid #e5e7ea;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.itemlist {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.list-inline {
+    margin-bottom: 0;
+}
+
+.list-inline-item {
+    vertical-align: middle;
+}
+
+/**/
 /*Product Card*/
 .list-pro {
    
@@ -96,8 +157,8 @@ a {
     align-items: center;
 }
 
-.product-card button {
-    background-color: #000;
+.product-card a {
+    
     color: #fff;
     border: none;
     border-radius: 50%;
@@ -114,9 +175,9 @@ a {
     color: #fff;
 }
 
-.product-card:hover button {
+.product-card:hover img {
     color: #000;
-    background-color: #fff;
+   
 }
 
 @media screen and (max-width: 576px) {

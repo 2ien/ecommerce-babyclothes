@@ -63,3 +63,288 @@ D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\EntityFramework.dll
 D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\EntityFramework.SqlServer.dll
 D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\EntityFramework.xml
 D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\EntityFramework.SqlServer.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\JetBrains.Annotations.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Antiforgery.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Authentication.Abstractions.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Authentication.Core.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Authorization.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Authorization.Policy.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.DataProtection.Abstractions.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.DataProtection.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Diagnostics.Abstractions.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Hosting.Abstractions.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Html.Abstractions.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Http.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Http.Extensions.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Http.Features.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.JsonPatch.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Mvc.Abstractions.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Mvc.Core.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Mvc.DataAnnotations.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Mvc.Formatters.Json.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Routing.Abstractions.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Routing.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.WebUtilities.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.DotNet.PlatformAbstractions.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.DependencyInjection.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.DependencyModel.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.Hosting.Abstractions.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.Localization.Abstractions.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.Localization.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.Logging.Abstractions.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.ObjectPool.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.Options.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.Primitives.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.WebEncoders.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.Net.Http.Headers.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.Win32.Registry.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Newtonsoft.Json.Bson.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\PagedList.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\PagedList.Mvc.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\System.Buffers.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\System.ComponentModel.Annotations.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\System.Diagnostics.DiagnosticSource.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\System.Memory.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\System.Numerics.Vectors.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\System.Security.AccessControl.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\System.Security.Cryptography.Xml.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\System.Security.Permissions.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\System.Security.Principal.Windows.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\System.Text.Encodings.Web.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\System.Threading.Tasks.Extensions.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\X.PagedList.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\X.PagedList.Web.Common.dll
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\JetBrains.Annotations.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Antiforgery.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Authentication.Abstractions.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Authentication.Core.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Authorization.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Authorization.Policy.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Cryptography.Internal.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.DataProtection.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.DataProtection.Abstractions.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Diagnostics.Abstractions.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Hosting.Abstractions.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Html.Abstractions.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Http.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Http.Extensions.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Http.Features.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.JsonPatch.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Mvc.Abstractions.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Mvc.Core.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Mvc.DataAnnotations.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Mvc.Formatters.Json.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Mvc.ViewFeatures.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.ResponseCaching.Abstractions.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Routing.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Routing.Abstractions.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.WebUtilities.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.DependencyInjection.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.Hosting.Abstractions.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.Localization.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.Localization.Abstractions.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.Logging.Abstractions.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.ObjectPool.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.Options.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.Primitives.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.WebEncoders.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Microsoft.Net.Http.Headers.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\Newtonsoft.Json.Bson.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\PagedList.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\PagedList.Mvc.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\System.Buffers.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\System.Diagnostics.DiagnosticSource.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\System.Memory.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\System.Numerics.Vectors.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\System.Text.Encodings.Web.xml
+D:\myproject\MVC\ecommerce-shop\ecommerce-shop\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\ecommerce-shop.dll.config
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\ecommerce-shop.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\ecommerce-shop.pdb
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\roslyn\csc.exe
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\roslyn\csc.exe.config
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\roslyn\csc.rsp
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\roslyn\csi.exe
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\roslyn\csi.exe.config
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\roslyn\csi.rsp
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\roslyn\System.Buffers.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\roslyn\System.Memory.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\roslyn\System.Numerics.Vectors.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\roslyn\vbc.exe
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\roslyn\vbc.exe.config
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\roslyn\vbc.rsp
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\roslyn\VBCSCompiler.exe
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Antlr3.Runtime.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\EntityFramework.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\EntityFramework.SqlServer.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\JetBrains.Annotations.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Antiforgery.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Authentication.Abstractions.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Authentication.Core.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Authorization.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Authorization.Policy.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.DataProtection.Abstractions.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.DataProtection.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Diagnostics.Abstractions.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Hosting.Abstractions.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Html.Abstractions.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Http.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Http.Extensions.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Mvc.Abstractions.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Mvc.Core.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Mvc.DataAnnotations.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Mvc.Formatters.Json.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Routing.Abstractions.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Routing.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.WebUtilities.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.DependencyModel.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.Localization.Abstractions.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.Localization.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.ObjectPool.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.Options.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.Primitives.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.WebEncoders.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.Net.Http.Headers.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.Win32.Registry.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Newtonsoft.Json.Bson.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Newtonsoft.Json.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\PagedList.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\PagedList.Mvc.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\System.Buffers.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\System.ComponentModel.Annotations.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\System.Memory.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\System.Numerics.Vectors.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\System.Security.AccessControl.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\System.Security.Cryptography.Xml.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\System.Security.Permissions.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\System.Security.Principal.Windows.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\System.Text.Encodings.Web.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\System.Web.Helpers.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\System.Web.Mvc.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\System.Web.Optimization.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\System.Web.Razor.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\System.Web.WebPages.Deployment.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\System.Web.WebPages.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\System.Web.WebPages.Razor.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\WebGrease.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\X.PagedList.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\X.PagedList.Web.Common.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\EntityFramework.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\EntityFramework.SqlServer.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\JetBrains.Annotations.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Antiforgery.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Authentication.Abstractions.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Authentication.Core.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Authorization.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Authorization.Policy.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Cryptography.Internal.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.DataProtection.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.DataProtection.Abstractions.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Diagnostics.Abstractions.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Hosting.Abstractions.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Hosting.Server.Abstractions.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Html.Abstractions.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Http.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Http.Extensions.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Http.Features.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.JsonPatch.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Mvc.Abstractions.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Mvc.Core.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Mvc.DataAnnotations.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Mvc.Formatters.Json.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Mvc.ViewFeatures.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.ResponseCaching.Abstractions.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Routing.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.Routing.Abstractions.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.AspNetCore.WebUtilities.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.Hosting.Abstractions.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.Localization.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.Localization.Abstractions.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.ObjectPool.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.Options.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.Primitives.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.Extensions.WebEncoders.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Microsoft.Net.Http.Headers.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Newtonsoft.Json.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Newtonsoft.Json.Bson.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\PagedList.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\PagedList.Mvc.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\System.Buffers.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\System.Memory.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\System.Numerics.Vectors.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\System.Text.Encodings.Web.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\System.Web.Helpers.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\System.Web.Mvc.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\System.Web.Razor.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\System.Web.WebPages.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\System.Web.WebPages.Deployment.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\System.Web.WebPages.Razor.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\System.Web.Optimization.xml
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\bin\Antlr3.Runtime.pdb
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\obj\Debug\ecommerce-shop.csproj.AssemblyReference.cache
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\obj\Debug\ecommerce-shop.csproj.CoreCompileInputs.cache
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\obj\Debug\ecommerce-shop.csproj.CopyComplete
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\obj\Debug\ecommerce-shop.dll
+C:\Users\MY PC\Desktop\ecommerce-shop\ecommerce-shop\ecommerce-shop\obj\Debug\ecommerce-shop.pdb

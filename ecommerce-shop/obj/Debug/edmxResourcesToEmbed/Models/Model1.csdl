@@ -13,28 +13,31 @@
       <End Role="PhanQuyen" EntitySet="PhanQuyens" />
     </AssociationSet>
     <EntitySet Name="Users" EntityType="DBQLEcommerceShopModel.User" />
-    <EntitySet Name="NhaCungCaps" EntityType="DBQLEcommerceShopModel.NhaCungCap" />
     <EntitySet Name="sysdiagrams" EntityType="DBQLEcommerceShopModel.sysdiagram" />
-    <EntitySet Name="ChatLieux" EntityType="DBQLEcommerceShopModel.ChatLieu" />
     <EntitySet Name="ChiTietHoaDons" EntityType="DBQLEcommerceShopModel.ChiTietHoaDon" />
     <EntitySet Name="HoaDons" EntityType="DBQLEcommerceShopModel.HoaDon" />
-    <EntitySet Name="KhachHangs" EntityType="DBQLEcommerceShopModel.KhachHang" />
-    <EntitySet Name="SanPhams" EntityType="DBQLEcommerceShopModel.SanPham" />
-    <AssociationSet Name="FK__SanPham__GhiChu__0697FACD" Association="DBQLEcommerceShopModel.FK__SanPham__GhiChu__0697FACD">
-      <End Role="ChatLieu" EntitySet="ChatLieux" />
-      <End Role="SanPham" EntitySet="SanPhams" />
-    </AssociationSet>
     <AssociationSet Name="FK__ChiTietHo__idHoa__0D44F85C" Association="DBQLEcommerceShopModel.FK__ChiTietHo__idHoa__0D44F85C">
       <End Role="HoaDon" EntitySet="HoaDons" />
       <End Role="ChiTietHoaDon" EntitySet="ChiTietHoaDons" />
+    </AssociationSet>
+    <EntitySet Name="AnhSanPhams" EntityType="DBQLEcommerceShopModel.AnhSanPham" />
+    <EntitySet Name="Kieux" EntityType="DBQLEcommerceShopModel.Kieu" />
+    <AssociationSet Name="FK_HoaDon_User" Association="DBQLEcommerceShopModel.FK_HoaDon_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="HoaDon" EntitySet="HoaDons" />
+    </AssociationSet>
+    <EntitySet Name="SanPhams" EntityType="DBQLEcommerceShopModel.SanPham" />
+    <AssociationSet Name="FK_AnhSanPham_SanPham" Association="DBQLEcommerceShopModel.FK_AnhSanPham_SanPham">
+      <End Role="SanPham" EntitySet="SanPhams" />
+      <End Role="AnhSanPham" EntitySet="AnhSanPhams" />
     </AssociationSet>
     <AssociationSet Name="FK__ChiTietHo__Thanh__0C50D423" Association="DBQLEcommerceShopModel.FK__ChiTietHo__Thanh__0C50D423">
       <End Role="SanPham" EntitySet="SanPhams" />
       <End Role="ChiTietHoaDon" EntitySet="ChiTietHoaDons" />
     </AssociationSet>
-    <AssociationSet Name="FK__HoaDon__TongTien__09746778" Association="DBQLEcommerceShopModel.FK__HoaDon__TongTien__09746778">
-      <End Role="KhachHang" EntitySet="KhachHangs" />
-      <End Role="HoaDon" EntitySet="HoaDons" />
+    <AssociationSet Name="FK_SanPham_Kieu" Association="DBQLEcommerceShopModel.FK_SanPham_Kieu">
+      <End Role="Kieu" EntitySet="Kieux" />
+      <End Role="SanPham" EntitySet="SanPhams" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="ChucNang">
@@ -110,14 +113,7 @@
     <Property Name="HoVaTen" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" Type="String" />
     <Property Name="SoDienThoai" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
     <Property Name="RePassword" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-  </EntityType>
-  <EntityType Name="NhaCungCap">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="Int32" Nullable="false" />
-    <Property Name="TenNhaCungCap" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-    <Property Name="DiaChiNhaCungCap" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HoaDons" Relationship="DBQLEcommerceShopModel.FK_HoaDon_User" FromRole="User" ToRole="HoaDon" />
   </EntityType>
   <EntityType Name="sysdiagram">
     <Key>
@@ -128,14 +124,6 @@
     <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="version" Type="Int32" />
     <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-  </EntityType>
-  <EntityType Name="ChatLieu">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="TenChatLieu" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="SanPhams" Relationship="DBQLEcommerceShopModel.FK__SanPham__GhiChu__0697FACD" FromRole="ChatLieu" ToRole="SanPham" />
   </EntityType>
   <EntityType Name="ChiTietHoaDon">
     <Key>
@@ -161,44 +149,8 @@
     <Property Name="idKhachHang" Type="Int32" Nullable="false" />
     <Property Name="TongTien" Type="Int32" Nullable="false" />
     <NavigationProperty Name="ChiTietHoaDons" Relationship="DBQLEcommerceShopModel.FK__ChiTietHo__idHoa__0D44F85C" FromRole="HoaDon" ToRole="ChiTietHoaDon" />
-    <NavigationProperty Name="KhachHang" Relationship="DBQLEcommerceShopModel.FK__HoaDon__TongTien__09746778" FromRole="HoaDon" ToRole="KhachHang" />
+    <NavigationProperty Name="User" Relationship="DBQLEcommerceShopModel.FK_HoaDon_User" FromRole="HoaDon" ToRole="User" />
   </EntityType>
-  <EntityType Name="KhachHang">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="TenKhach" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="DiaChi" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
-    <Property Name="SoDienThoai" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="HoaDons" Relationship="DBQLEcommerceShopModel.FK__HoaDon__TongTien__09746778" FromRole="KhachHang" ToRole="HoaDon" />
-  </EntityType>
-  <EntityType Name="SanPham">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="TenSanPham" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
-    <Property Name="idChatLieu" Type="Int32" Nullable="false" />
-    <Property Name="SoLuong" Type="Int32" Nullable="false" />
-    <Property Name="GiaBan" Type="Int32" Nullable="false" />
-    <Property Name="HinhAnh" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-    <Property Name="GhiChu" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="ChatLieu" Relationship="DBQLEcommerceShopModel.FK__SanPham__GhiChu__0697FACD" FromRole="SanPham" ToRole="ChatLieu" />
-    <NavigationProperty Name="ChiTietHoaDons" Relationship="DBQLEcommerceShopModel.FK__ChiTietHo__Thanh__0C50D423" FromRole="SanPham" ToRole="ChiTietHoaDon" />
-  </EntityType>
-  <Association Name="FK__SanPham__GhiChu__0697FACD">
-    <End Type="DBQLEcommerceShopModel.ChatLieu" Role="ChatLieu" Multiplicity="1" />
-    <End Type="DBQLEcommerceShopModel.SanPham" Role="SanPham" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="ChatLieu">
-        <PropertyRef Name="ID" />
-      </Principal>
-      <Dependent Role="SanPham">
-        <PropertyRef Name="idChatLieu" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK__ChiTietHo__idHoa__0D44F85C">
     <End Type="DBQLEcommerceShopModel.HoaDon" Role="HoaDon" Multiplicity="1" />
     <End Type="DBQLEcommerceShopModel.ChiTietHoaDon" Role="ChiTietHoaDon" Multiplicity="*" />
@@ -208,6 +160,67 @@
       </Principal>
       <Dependent Role="ChiTietHoaDon">
         <PropertyRef Name="idHoaDon" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="AnhSanPham">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="idSanPham" Type="Int32" Nullable="false" />
+    <Property Name="UrlAnh" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SanPham" Relationship="DBQLEcommerceShopModel.FK_AnhSanPham_SanPham" FromRole="AnhSanPham" ToRole="SanPham" />
+  </EntityType>
+  <EntityType Name="Kieu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenKieu" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SanPhams" Relationship="DBQLEcommerceShopModel.FK_SanPham_Kieu" FromRole="Kieu" ToRole="SanPham" />
+  </EntityType>
+  <Association Name="FK_HoaDon_User">
+    <End Type="DBQLEcommerceShopModel.User" Role="User" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="DBQLEcommerceShopModel.HoaDon" Role="HoaDon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HoaDon">
+        <PropertyRef Name="idKhachHang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="SanPham">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenSanPham" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="idKieu" Type="Int32" Nullable="false" />
+    <Property Name="SoLuong" Type="Int32" Nullable="false" />
+    <Property Name="GiaBan" Type="Int32" Nullable="false" />
+    <Property Name="HinhAnh" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="GhiChu" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AnhSanPhams" Relationship="DBQLEcommerceShopModel.FK_AnhSanPham_SanPham" FromRole="SanPham" ToRole="AnhSanPham" />
+    <NavigationProperty Name="ChiTietHoaDons" Relationship="DBQLEcommerceShopModel.FK__ChiTietHo__Thanh__0C50D423" FromRole="SanPham" ToRole="ChiTietHoaDon" />
+    <NavigationProperty Name="Kieu" Relationship="DBQLEcommerceShopModel.FK_SanPham_Kieu" FromRole="SanPham" ToRole="Kieu" />
+    <Property Name="NgayTao" Type="DateTime" Precision="3" />
+  </EntityType>
+  <Association Name="FK_AnhSanPham_SanPham">
+    <End Type="DBQLEcommerceShopModel.SanPham" Role="SanPham" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="DBQLEcommerceShopModel.AnhSanPham" Role="AnhSanPham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SanPham">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="AnhSanPham">
+        <PropertyRef Name="idSanPham" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -223,15 +236,15 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__HoaDon__TongTien__09746778">
-    <End Type="DBQLEcommerceShopModel.KhachHang" Role="KhachHang" Multiplicity="1" />
-    <End Type="DBQLEcommerceShopModel.HoaDon" Role="HoaDon" Multiplicity="*" />
+  <Association Name="FK_SanPham_Kieu">
+    <End Type="DBQLEcommerceShopModel.Kieu" Role="Kieu" Multiplicity="1" />
+    <End Type="DBQLEcommerceShopModel.SanPham" Role="SanPham" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="KhachHang">
+      <Principal Role="Kieu">
         <PropertyRef Name="ID" />
       </Principal>
-      <Dependent Role="HoaDon">
-        <PropertyRef Name="idKhachHang" />
+      <Dependent Role="SanPham">
+        <PropertyRef Name="idKieu" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

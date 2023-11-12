@@ -29,12 +29,11 @@ namespace ecommerce_shop.Models
         public virtual DbSet<NhanVien> NhanViens { get; set; }
         public virtual DbSet<PhanQuyen> PhanQuyens { get; set; }
         public virtual DbSet<User> Users { get; set; }
-        public virtual DbSet<NhaCungCap> NhaCungCaps { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
-        public virtual DbSet<ChatLieu> ChatLieux { get; set; }
         public virtual DbSet<ChiTietHoaDon> ChiTietHoaDons { get; set; }
         public virtual DbSet<HoaDon> HoaDons { get; set; }
-        public virtual DbSet<KhachHang> KhachHangs { get; set; }
+        public virtual DbSet<AnhSanPham> AnhSanPhams { get; set; }
+        public virtual DbSet<Kieu> Kieux { get; set; }
         public virtual DbSet<SanPham> SanPhams { get; set; }
     }
 }
