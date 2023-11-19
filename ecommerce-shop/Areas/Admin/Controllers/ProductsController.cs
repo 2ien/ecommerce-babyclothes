@@ -1,4 +1,5 @@
-﻿using ecommerce_shop.Models;
+﻿using ecommerce_shop.App_Start;
+using ecommerce_shop.Models;
 using PagedList;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,7 @@ namespace ecommerce_shop.Areas.Admin.Controllers
     {
         DBQLEcommerceShopEntities db = new DBQLEcommerceShopEntities();
         // GET: Admin/Product
+        [AdminAuthorize(idChucNang = 1)]
         public ActionResult SanPham(int? page)
         {
             IEnumerable<SanPham> items = db.SanPhams.OrderByDescending(x => x.ID);
@@ -31,6 +33,7 @@ namespace ecommerce_shop.Areas.Admin.Controllers
          }
         public ActionResult Add()
         {
+            ViewBag.ProductCategory = new SelectList(db.Kieux.ToList(),"ID","TenKieu");
             return View();
         }
     }

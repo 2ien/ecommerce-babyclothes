@@ -1,9 +1,10 @@
-﻿@model PagedList.PagedList<ecommerce_shop.Models.SanPham>
-@using PagedList.Mvc
+﻿@model IEnumerable<ecommerce_shop.Models.Kieu>
 @{
-    ViewBag.Title = "SanPham";
+    ViewBag.Title = "Danh mục sản phẩm";
     Layout = "~/Areas/Admin/Views/Shared/_layout-admin.cshtml";
 }
+
+
 
 <style>
     .add-product a {
@@ -106,38 +107,32 @@
     <div class="row" style="margin-top:20px">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="product-status-wrap">
-                <h4>Products List</h4>
+                <h4>Danh mục sản phẩm</h4>
                 <div class="add-product">
-                    <a href="~/Admin/Products/Add">Add Product</a>
+                    <a href="~/Admin/ProductCategory/Add">Thêm danh mục sản phẩm</a>
                 </div>
                 <table>
                     <tr>
                         <th>STT</th>
-                        <th>Hình Ảnh</th>
-                        <th>Tên Sản Phẩm</th>
-                        <th>Số lượng</th>
-                        <th>Giá</th>
-                        <th>Loại</th>
-                        <th>Setting</th>
+                   
+                        <th>Tên Danh Mục</th>
+                      
+                      
                     </tr>
                     @if (Model != null && Model.Any())
                     {
-                        var i = ((ViewBag).Page - 1 * ViewBag.PageSize) + 1;
+                       
                         foreach (var item in Model)
                         {
                             <tr>
-                                <td>@item.ID</td>
-                                <td><img src="@Url.Content(item.HinhAnh)" alt="" /></td>
-                                <td>@item.TenSanPham</td>
-                                <td>@item.SoLuong</td>
-                                <td>@item.GiaBan,000k</td>
-                                <td>@item.Kieu.TenKieu</td>
+                                <td>@item.ID</td>                     
+                                <td>@item.TenKieu</td>                            
                                 <td>
                                     <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
                                     <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
                                 </td>
                             </tr>
-                            i++;
+                          
                         }
                     }
                     else
