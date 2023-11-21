@@ -14,9 +14,7 @@
 body {
     margin: 0;
     padding: 0;
- 
     height: 100vh;
-
 }
 
 .center {
@@ -30,16 +28,16 @@ body {
     box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
 }
 
-    .center h1 {
-        text-align: center;
-        padding: 20px 0;
-        border-bottom: 1px solid silver;
-    }
+.center h1 {
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid silver;
+}
 
-    .center form {
-        padding: 0 40px;
-        box-sizing: border-box;
-    }
+.center form {
+    padding: 0 40px;
+    box-sizing: border-box;
+}
 
 form .txt_field {
     position: relative;
@@ -96,9 +94,9 @@ form .txt_field {
     cursor: pointer;
 }
 
-    .pass:hover {
-        text-decoration: underline;
-    }
+.pass:hover {
+    text-decoration: underline;
+}
 
 input[type="submit"] {
     width: 100%;

@@ -8,71 +8,81 @@
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <style>
- 
 </style>
-<form class="form-horizontal" style="margin-top: 20px">
-    @using (Html.BeginForm("Add", "Products", FormMethod.Post, new { }))
-    {
-        @Html.AntiForgeryToken()    
-        @Html.ValidationSummary(true)
-    <fieldset>
-        <legend>Thêm sản phẩm</legend>
-        <div class="form-group">
-            <label class="col-md-4 control-label">Tên sản phẩm</label>
-            <div class="col-md-4">
-                <input name="TenSanPham" placeholder="Nhập tên sản phẩm" class="form-control input-md" required="" type="text">
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="col-md-4 control-label">Loại sản phẩm</label>
-            <div class="col-md-4">
-                @Html.DropDownListFor(x => x.Kieu,ViewBag.ProductCategory as SelectList,"Chọn danh mục sản phẩm", new {@class = ""})
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="col-md-4 control-label">Số lượng</label>
-            <div class="col-md-4">
-                <input name="SoLuong" class="form-control input-md" required="" type="text">
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="col-md-4 control-label">Giá Bán</label>
-            <div class="col-md-4">
-                <input name="GiaBan" class="form-control input-md" required="" type="text">
-            </div>
-        </div>
 
-        <div class="form-group">
-            <label class="col-md-4 control-label" >Mô Tả</label>
-            <div class="col-md-4">
-                <textarea class="form-control" id="product_description" name="GhiChu"></textarea>
-            </div>
+@using (Html.BeginForm("Add", "Products", FormMethod.Post, new { enctype = "multipart/form-data", @class = "form-horizontal" }))
+{
+    <br />
+    @Html.AntiForgeryToken()
+<fieldset>
+    <legend>Thêm sản phẩm</legend>
+    <div class="form-group">
+        <label class="col-md-4 control-label">Tên sản phẩm</label>
+        <div class="col-md-4">
+            <input name="TenSanPham" placeholder="Nhập tên sản phẩm" class="form-control input-md" required="" type="text">
         </div>
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="filebutton">main_image</label>
-                    <div class="col-md-4">
-                        <input id="filebutton" name="HinhAnh" class="input-file" type="file">
-                    </div>
-                </div>
+    </div>
 
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="filebutton">auxiliary_images</label>
-                    <div class="col-md-4">
-                        <input id="filebutton" name="HinhAnh" class="input-file" type="file">
-                    </div>
-                </div>
+    <div class="form-group">
+        <label class="col-md-4 control-label">id Loại</label>
+        <div class="col-md-4">
+            <input name="idKieu" class="form-control input-md" required="" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-4 control-label">Số lượng</label>
+        <div class="col-md-4">
+            <input name="SoLuong" class="form-control input-md" required="" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-4 control-label">Giá Bán</label>
+        <div class="col-md-4">
+            <input name="GiaBan" class="form-control input-md" required="" type="text">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-4 control-label">Mô Tả</label>
+        <div class="col-md-4">
+            <textarea class="form-control" id="product_description" name="GhiChu"></textarea>
+        </div>
+    </div>
+    =
+
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="filebutton">Ảnh sản phẩm</label>
+        <div class="col-md-4">
 
 
-                <div class="form-group">
-                    <label class="col-md-4 control-label" for="singlebutton">Single Button</label>
-                    <div class="col-md-4">
-                        <button id="singlebutton" name="singlebutton" class="btn btn-primary">Button</button>
-                    </div>
-                </div>
+            <input type="file" name="ImageUpload" onchange="ShowImagePreview(this,document.getElementById('previewImage'))" />
 
-    </fieldset>
+            <img width="100" id="previewImage" />
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="singlebutton"></label>
+        <div class="col-md-4">
+            <input type="submit" value="Thêm" class="btn btn-primary">
+        </div>
+    </div>
+
+</fieldset>
+}
+
+
+<script>
+    function ShowImagePreview(imgaeUploader, previewImage) {
+        if (imgaeUploader.files && imgaeUploader.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $(previewImage).attr('src', e.target.result);
+            }
+            reader.readAsDataURL(imgaeUploader.files[0]);
+        }
     }
-
-</form>
+</script>
 
 

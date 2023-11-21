@@ -31,8 +31,7 @@ namespace ecommerce_shop.Controllers
                 Session["ID"] = user.ID;
                 Session["Username"] = user.Username;
                 return RedirectToAction("Index", "Home");
-            }
-           
+            }          
         }
     
         [HttpGet]

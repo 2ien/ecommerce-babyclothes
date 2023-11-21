@@ -9,6 +9,8 @@ using System.Web;
 using System.Web.Mvc;
 using X.PagedList;
 using PagedList;
+using System.Threading.Tasks;
+
 namespace ecommerce_shop.Controllers
 {
     public class HomeController : Controller
@@ -29,7 +31,11 @@ namespace ecommerce_shop.Controllers
             var items = db.SanPhams.OrderByDescending(x => x.ID).ToPagedList(pageThoiTrang,pageSize);
             return View(items);
         }
-        public ActionResult HuongDan()
+        public ActionResult ChiTietSanPham(int id )
+        {
+            return View(db.SanPhams.Where(m => m.ID == id).FirstOrDefault());
+        }
+        public ActionResult HuongDan()//đổi lại thành Giới thiệu
         {
             return View();
         }

@@ -24,12 +24,16 @@
 
                 <div class="list-pro col-sm-6 col-md-4 col-lg-3">
                     <div class="product-card">
+
+                     
                         <img src="@Url.Content(item.HinhAnh)" />
-                        <h4>@item.TenSanPham</h4>
+                        <h4>@item.TenSanPham</h4>                 
                         <div>
-                            <span>@Html.DisplayFor(model => item.GiaBan)K</span>
+                            <span>@Html.DisplayFor(model => item.GiaBan),000k</span>
+                            <a href="~/Home/ChiTietSanPham/@item.ID"><img src="~/Content/imgs/icons8-detail-48.png" /></a>
                             <a href="~/ShoppingCart/AddtoCart/@item.ID">
                                 <img src="~/Content/imgs/icons8-plus-40.png" />
+
                             </a>
 
                         </div>

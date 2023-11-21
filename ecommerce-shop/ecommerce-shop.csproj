@@ -325,9 +325,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AnhSanPham.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\ChiTietHoaDon.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -383,7 +380,6 @@
     <Content Include="Areas\Admin\Content\css\metisMenu.min.css" />
     <Content Include="Areas\Admin\Content\css\morris.css" />
     <Content Include="Areas\Admin\Content\css\startmin.css" />
-    <Content Include="Areas\Admin\Content\css\timeline.css" />
     <Content Include="Areas\Admin\Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Areas\Admin\Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Areas\Admin\Content\js\bootstrap.min.js" />
@@ -451,12 +447,22 @@
     <Content Include="Content\fonts\fontawesome\webfonts\fa-regular-400.svg" />
     <Content Include="Content\fonts\fontawesome\webfonts\fa-solid-900.svg" />
     <Content Include="Content\fonts\roboto\font.css" />
+    <Content Include="Content\images\background.jpg" />
+    <Content Include="Content\images\forhomeview.jpg" />
     <Content Include="Content\images\holyday.jpg" />
+    <Content Include="Content\images\page_banner1.jpg" />
     <Content Include="Content\images\payments.png" />
+    <Content Include="Content\images\pink-socks-shoes-toys-set-baby-stuff-accessories-girl-pastel-background-baby-shower-concept-fashion-.jpg" />
     <Content Include="Content\images\pjset.jpg" />
+    <Content Include="Content\images\sales.jpg" />
     <Content Include="Content\images\seasonfinalesale.jpg" />
+    <Content Include="Content\images\yt5s.com-100 Years of Baby Fashion _ Glamour-%281080p%29.mp4" />
+    <Content Include="Content\images\Ảnh chụp màn hình 2023-03-30 211003.png" />
+    <Content Include="Content\images\Ảnh chụp màn hình 2023-04-01 122503.png" />
+    <Content Include="Content\images\Ảnh chụp màn hình 2023-04-15 004943.png" />
     <Content Include="Content\imgs\181.jpg" />
     <Content Include="Content\imgs\8776719-removebg-preview.png" />
+    <Content Include="Content\imgs\icons8-detail-48.png" />
     <Content Include="Content\imgs\icons8-facebook-48.png" />
     <Content Include="Content\imgs\icons8-github-48.png" />
     <Content Include="Content\imgs\icons8-instagram-48.png" />
@@ -553,6 +559,8 @@
     <Content Include="Areas\Admin\Views\Products\Add.cshtml" />
     <Content Include="Areas\Admin\Views\ProductCategory\Index.cshtml" />
     <Content Include="Areas\Admin\Views\ProductCategory\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\Products\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Products\Delete.cshtml" />
     <None Include="Scripts\jquery-3.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.1.js" />
     <Content Include="Scripts\jquery-3.7.1.min.js" />
@@ -663,6 +671,11 @@
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\ShoppingCart\ShowCart.cshtml" />
+    <Content Include="Views\ShoppingCart\BagCart.cshtml" />
+    <Content Include="Views\ShoppingCart\EmptyCart.cshtml" />
+    <Content Include="Views\Home\ChiTietSanPham.cshtml" />
+    <Content Include="Views\ShoppingCart\CheckOutSuccess.cshtml" />
+    <Content Include="Views\ShoppingCart\ReCheckOut.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

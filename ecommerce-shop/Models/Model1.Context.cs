@@ -32,7 +32,6 @@ namespace ecommerce_shop.Models
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<ChiTietHoaDon> ChiTietHoaDons { get; set; }
         public virtual DbSet<HoaDon> HoaDons { get; set; }
-        public virtual DbSet<AnhSanPham> AnhSanPhams { get; set; }
         public virtual DbSet<Kieu> Kieux { get; set; }
         public virtual DbSet<SanPham> SanPhams { get; set; }
     }

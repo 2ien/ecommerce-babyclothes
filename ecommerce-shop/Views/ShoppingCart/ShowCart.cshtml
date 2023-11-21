@@ -47,44 +47,46 @@
                                                     <div class="aside"><img src="@Url.Content(item._sanpham.HinhAnh)" class="img-sm"></div>
                                                     <figcaption class="info">
                                                         <a href="#" class="title text-dark">@item._sanpham.TenSanPham</a>
-                                                        <p class="text-muted small">Size: XL, Color: blue, <br> Brand: Gucci</p>
+                                                        <p class="text-muted small">xx <br> Brand: Coconut</p>
                                                     </figcaption>
                                                 </figure>
                                             </td>
-                                            <td>
-                                                @using (Html.BeginForm("Update_Quantity_Cart", "ShoppingCart"))
-                                                {
+                                            @using (Html.BeginForm("Update_Quantity_Cart", "ShoppingCart"))
+                                            {
+                                                <td>
+
                                                     <input type="hidden" value="@item._sanpham.ID" name="ID_SanPham" />
                                                     <input type="number" value="@item._quantity" name="Quantity" />
-                                                    <input type="submit" value="Update Quantity">
-                                                }
+                                                
 
-                                            </td>
-                                            <td>
-                                                <div class="price-wrap">
-                                                    <var class="price">@total k</var>
-                                                    <small class="text-muted">@Html.DisplayFor(model => item._sanpham.GiaBan)k/1</small>
-                                                </div> <!-- price-wrap .// -->
-                                            </td>
-                                            <td class="text-right">
-                                                <a data-original-title="Save to Wishlist" title="" href="" class="btn btn-light" data-toggle="tooltip"> <i class="fa fa-heart"></i></a>
-                                                <a href="/ShoppingCart/RemoveCart/@item._sanpham.ID)" class="btn btn-light"> Remove</a>
-                                              
-                                            </td>
-                                        </tr>
+                                                    
+                                                </td>
+                                                <td>
+                                                    <div class="price-wrap">
+                                                        <var class="price">@total k</var>
+                                                        <small class="text-muted">@Html.DisplayFor(model => item._sanpham.GiaBan)k/1</small>
+                                                    </div> <!-- price-wrap .// -->
+                                                </td>
+                                                <td class="text-right">
+                                                    <a class="btn btn-light"> <input type="submit" value="Update Quantity"></a>
+                                                    <a href="/ShoppingCart/RemoveCart/@item._sanpham.ID" class="btn btn-light">Xóa</a>
+
+                                                </td>
+                                            }
+                                            </tr>
                                     }
                         
                                 </tbody>
                             </table>
 
-                            <div class="card-body border-top">
-                                <a href="#" class="btn btn-primary float-md-right"> Make Purchase <i class="fa fa-chevron-right"></i> </a>
-                                <a href="~/Home/ThoiTrang" class="btn btn-light"> <i class="fa fa-chevron-left"></i> Continue shopping </a>
+                            <div class="card-body border-top">                           
+                                <a href="/ShoppingCart/ReCheckOut" class="btn btn-primary float-md-right"> Đặt hàng <i class="fa fa-chevron-right"></i> </a>
+                                <a href="~/Home/ThoiTrang" class="btn btn-light"> <i class="fa fa-chevron-left"></i> Tiếp tục mua </a>
                             </div>
                         </div> <!-- card.// -->
 
                         <div class="alert alert-success mt-3">
-                            <p class="icontext"><i class="icon text-success fa fa-truck"></i> Free Delivery within 1-2 weeks</p>
+                            <p class="icontext"><i class="icon text-success fa fa-truck"></i> Vận chuyển miễn phí nội thành</p>
                         </div>
 
                     </main> <!-- col.// -->
@@ -120,7 +122,8 @@
                                 </dl>
                                 <hr>
                                 <p class="text-center mb-3">
-                                    <img src="~/Content/images/payments.png" height="26">
+                                   
+                                    <img src="~/Content/images/payments.png" />
                                 </p>
 
                             </div> <!-- card-body.// -->
@@ -131,6 +134,10 @@
             </div> <!-- container .//  -->
         </section>
     }
+    else
+            {
+                @Html.Partial("EmptyCart")
+            }
 
 
 

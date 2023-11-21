@@ -108,7 +108,7 @@
             <div class="product-status-wrap">
                 <h4>Products List</h4>
                 <div class="add-product">
-                    <a href="~/Admin/Products/Add">Add Product</a>
+                    <a href="~/Admin/Products/Add">Thêm sản phẩm</a>
                 </div>
                 <table>
                     <tr>
@@ -133,8 +133,8 @@
                                 <td>@item.GiaBan,000k</td>
                                 <td>@item.Kieu.TenKieu</td>
                                 <td>
-                                    <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                    <button data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                    <a href="~/Admin/Products/Edit/@item.ID" data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                    <a href="~/Admin/Products/Delete/@item.ID" data-toggle="tooltip" title="Trash" class="pd-setting-ed"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
                                 </td>
                             </tr>
                             i++;
@@ -149,15 +149,10 @@
 
 
                 </table>
-                <div class="custom-pagination">
-                    <ul class="pagination">
-                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                    </ul>
-                </div>
+
+            <div class="custom-pagination">
+                @Html.PagedListPager(Model, page => Url.Action("SanPham", new { page }))
+            </div>
             </div>
         </div>
     </div>

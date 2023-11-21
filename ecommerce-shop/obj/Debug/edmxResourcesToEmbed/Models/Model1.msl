@@ -36,7 +36,6 @@
     <EntitySetMapping Name="Users">
       <EntityTypeMapping TypeName="DBQLEcommerceShopModel.User">
         <MappingFragment StoreEntitySet="User">
-          <ScalarProperty Name="RePassword" ColumnName="RePassword" />
           <ScalarProperty Name="SoDienThoai" ColumnName="SoDienThoai" />
           <ScalarProperty Name="HoVaTen" ColumnName="HoVaTen" />
           <ScalarProperty Name="Email" ColumnName="Email" />
@@ -72,19 +71,11 @@
     <EntitySetMapping Name="HoaDons">
       <EntityTypeMapping TypeName="DBQLEcommerceShopModel.HoaDon">
         <MappingFragment StoreEntitySet="HoaDon">
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
           <ScalarProperty Name="TongTien" ColumnName="TongTien" />
           <ScalarProperty Name="idKhachHang" ColumnName="idKhachHang" />
           <ScalarProperty Name="NgayBan" ColumnName="NgayBan" />
           <ScalarProperty Name="idNhanVien" ColumnName="idNhanVien" />
-          <ScalarProperty Name="ID" ColumnName="ID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="AnhSanPhams">
-      <EntityTypeMapping TypeName="DBQLEcommerceShopModel.AnhSanPham">
-        <MappingFragment StoreEntitySet="AnhSanPham">
-          <ScalarProperty Name="UrlAnh" ColumnName="UrlAnh" />
-          <ScalarProperty Name="idSanPham" ColumnName="idSanPham" />
           <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>

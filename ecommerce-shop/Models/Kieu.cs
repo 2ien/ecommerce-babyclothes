@@ -11,8 +11,7 @@ namespace ecommerce_shop.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class Kieu
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -22,8 +21,6 @@ namespace ecommerce_shop.Models
         }
     
         public int ID { get; set; }
-        [Required]
-        [StringLength(100)]
         public string TenKieu { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
