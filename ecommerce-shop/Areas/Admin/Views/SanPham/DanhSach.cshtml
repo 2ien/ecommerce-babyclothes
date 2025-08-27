@@ -1,0 +1,72 @@
+﻿@model IEnumerable<ecommerce_shop.Models.SanPham>
+@{
+    ViewBag.Title = "Danh Sách Sản Phẩm";
+}
+<h2>@ViewBag.Title</h2>
+
+<form method="get">
+    <input type="text" name="search" placeholder="Tìm tên sản phẩm..." />
+    <button type="submit">Tìm kiếm</button>
+</form>
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Tên</th>
+        <th>Giá</th>
+        <th>Hành động</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.TenSanPham</td>
+            <td>@item.GiaBan</td>
+            <td>
+                <a href="@Url.Action("CapNhat", new { id = item.ID })">Sửa</a> |
+                <a href="@Url.Action("Xoa", new { id = item.ID })" onclick="return confirm('Xác nhận xóa?')">Xóa</a>
+            </td>
+        </tr>
+    }
+</table>
+
+<a class="btn btn-primary" href="@Url.Action("ThemMoi")">Thêm mới sản phẩm</a>
+@*@model IEnumerable<ecommerce_shop.Models.SanPham>
+@{
+    ViewBag.Title = "Danh Sách Sản Phẩm";
+}
+<h2>@ViewBag.Title</h2>
+
+<form method="get">
+    <input type="text" name="search" placeholder="Tìm tên sản phẩm..." />
+    <button type="submit">Tìm kiếm</button>
+</form>
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Tên</th>
+        <th>Giá</th>
+        <th>Hành động</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.TenSanPham</td>
+            <td>@item.GiaBan</td>
+            <td>
+                <a href="@Url.Action("CapNhat", new { id = item.ID })">Sửa</a> |
+                @using (Html.BeginForm("Xoa", "SanPham", FormMethod.Post, new { onsubmit = "return confirm('Xác nhận xóa?');", style = "display:inline;" }))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.Hidden("id", item.ID)
+                    <button type="submit" class="btn btn-link" style="padding:0; border:none; background:none;">Xóa</button>
+                }
+            </td>
+        </tr>
+    }
+</table>
+
+<a class="btn btn-primary" href="@Url.Action("ThemMoi")">Thêm mới sản phẩm</a>*@
+

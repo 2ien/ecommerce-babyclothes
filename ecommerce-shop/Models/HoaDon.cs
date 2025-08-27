@@ -25,10 +25,10 @@ namespace ecommerce_shop.Models
         public Nullable<System.DateTime> NgayBan { get; set; }
         public int idKhachHang { get; set; }
         public int TongTien { get; set; }
-        public string DiaChi { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietHoaDon> ChiTietHoaDons { get; set; }
-        public virtual User User { get; set; }
+        public virtual KhachHang KhachHang { get; set; }
+        public virtual NhanVien NhanVien { get; set; }
     }
 }

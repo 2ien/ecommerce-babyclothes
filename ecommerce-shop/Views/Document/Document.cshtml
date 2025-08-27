@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Import Tài liệu (Ví dụ SSRF)";
+}
+
+<h2>Nhập URL Tài liệu</h2>
+
+@using (Html.BeginForm("Import", "Document", FormMethod.Post))
+{
+    <label>URL Tài liệu:</label>
+    <input type="text" name="docUrl" style="width:400px;" />
+    <button type="submit">Tải tài liệu</button>
+}
+
+@if (ViewBag.Error != null)
+{
+    <p style="color:red">@ViewBag.Error</p>
+}
+else if (ViewBag.Message != null)
+{
+    <p style="color:green">@ViewBag.Message</p>
+}
+
+<p style="color:orange">
+    <strong>Cảnh báo:</strong> xxx
+</p>
+

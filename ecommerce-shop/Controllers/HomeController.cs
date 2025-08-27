@@ -7,9 +7,6 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Web;
 using System.Web.Mvc;
-using X.PagedList;
-using PagedList;
-using System.Threading.Tasks;
 
 namespace ecommerce_shop.Controllers
 {
@@ -20,22 +17,27 @@ namespace ecommerce_shop.Controllers
         {
             return View();
         }
-        public ActionResult ThoiTrang(int? page)
+        // Trang ThoiTrang + tìm kiếm
+        public ActionResult ThoiTrang(string search)
         {
-            var pageSize = 10;
-            if(page == null)
+            var products = db.SanPhams.AsQueryable();
+
+            if (!string.IsNullOrEmpty(search))
             {
-                page = 1;
+                products = products.Where(p => p.TenSanPham.Contains(search));
             }
-            var pageThoiTrang = page.HasValue?Convert.ToInt32(page) : 1;
-            var items = db.SanPhams.OrderByDescending(x => x.ID).ToPagedList(pageThoiTrang,pageSize);
-            return View(items);
+
+            return View(products.ToList());
         }
-        public ActionResult ChiTietSanPham(int id )
+
+        // Trang chi tiết sản phẩm
+        public ActionResult ChiTietSanPham(int id)
         {
-            return View(db.SanPhams.Where(m => m.ID == id).FirstOrDefault());
+            var product = db.SanPhams.FirstOrDefault(p => p.ID == id);
+            if (product == null) return HttpNotFound("Không tìm thấy sản phẩm");
+            return View(product);
         }
-        public ActionResult HuongDan()//đổi lại thành Giới thiệu
+        public ActionResult HuongDan()
         {
             return View();
         }

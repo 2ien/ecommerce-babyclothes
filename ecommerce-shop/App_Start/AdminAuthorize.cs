@@ -1,6 +1,5 @@
 ﻿using ecommerce_shop.Models;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -8,52 +7,54 @@ using System.Web.Routing;
 
 namespace ecommerce_shop.App_Start
 {
-    public class AdminAuthorize:AuthorizeAttribute
+    public class AdminAuthorize : AuthorizeAttribute
     {
-        public  int idChucNang {  get; set; }
+        public int idChucNang { get; set; }
+
         public override void OnAuthorization(AuthorizationContext filterContext)
         {
-            #region 1.check session: da dang nhap => cho thuc hien filter
-            //Nguoc lai thi tro lai trang dang nhap
+            // 1. Kiểm tra đã đăng nhập chưa
             NhanVien nvSession = (NhanVien)HttpContext.Current.Session["user"];
             if (nvSession != null)
             {
-                #region 2.check quyen : Co quyen  => cho thuc hien filter
-                // nguoc lai bao loi
                 DBQLEcommerceShopEntities db = new DBQLEcommerceShopEntities();
-                var count = db.PhanQuyens.Count(m => m.idNhanVien == nvSession.ID & m.idChucNang == idChucNang);
-                if (count != 0)
+
+                //  Nếu là ID chức năng 5 thì cho qua luôn (Admin full quyền)
+                var isAdmin = db.PhanQuyens.Any(m => m.idNhanVien == nvSession.ID && m.idChucNang == 5);
+                if (isAdmin)
                 {
                     return;
                 }
-                else
+
+                // 2. Kiểm tra quyền thông thường
+                var hasPermission = db.PhanQuyens.Any(m => m.idNhanVien == nvSession.ID && m.idChucNang == idChucNang);
+                if (hasPermission)
                 {
-                    var returnUrl = filterContext.RequestContext.HttpContext.Request.RawUrl;
-                    filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(
-                        new
-                        {
-                            Controller = "Error",
-                            action = "Error",
-                            area = "Admin",
-                            returnUrl = returnUrl.ToString()
-                        }));
+                    return;
                 }
-                #endregion
-                return;
+
+                // Không có quyền -> redirect Error
+                var returnUrl = filterContext.RequestContext.HttpContext.Request.RawUrl;
+                filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary
+                {
+                    { "Controller", "Error" },
+                    { "action", "Error" },
+                    { "area", "Admin" },
+                    { "returnUrl", returnUrl }
+                });
             }
             else
             {
+                // Chưa đăng nhập
                 var returnUrl = filterContext.RequestContext.HttpContext.Request.RawUrl;
-                filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(
-                    new
-                    {
-                        Controller = "HomeAdmin",
-                        action = "Login",
-                        area = "Admin",
-                        returnUrl = returnUrl.ToString()
-                    }));
+                filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary
+                {
+                    { "Controller", "HomeAdmin" },
+                    { "action", "Login" },
+                    { "area", "Admin" },
+                    { "returnUrl", returnUrl }
+                });
             }
-            #endregion         
         }
     }
 }

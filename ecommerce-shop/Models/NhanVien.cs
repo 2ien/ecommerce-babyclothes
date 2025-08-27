@@ -17,6 +17,7 @@ namespace ecommerce_shop.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public NhanVien()
         {
+            this.HoaDons = new HashSet<HoaDon>();
             this.PhanQuyens = new HashSet<PhanQuyen>();
         }
     
@@ -29,6 +30,8 @@ namespace ecommerce_shop.Models
         public Nullable<int> idLoaiNhanVien { get; set; }
         public string ChucVu { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HoaDon> HoaDons { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PhanQuyen> PhanQuyens { get; set; }
     }

@@ -1,5 +1,4 @@
-﻿using ecommerce_shop.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +10,7 @@ namespace ecommerce_shop.Controllers
     {
         // GET: Product
         public ActionResult Detail()
-        { 
+        {
             return View();
         }
     }

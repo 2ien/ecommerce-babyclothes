@@ -21,11 +21,13 @@ namespace ecommerce_shop.Models
         }
     
         public int ID { get; set; }
+        public Nullable<int> UserID { get; set; }
         public string TenKhach { get; set; }
         public string DiaChi { get; set; }
         public string SoDienThoai { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoaDon> HoaDons { get; set; }
+        public virtual User User { get; set; }
     }
 }

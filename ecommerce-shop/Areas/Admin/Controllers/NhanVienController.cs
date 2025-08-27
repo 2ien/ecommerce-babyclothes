@@ -1,33 +1,45 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Linq;
 using System.Web.Mvc;
 using ecommerce_shop.Models;
-using ecommerce_shop.App_Start;
+
 namespace ecommerce_shop.Areas.Admin.Controllers
 {
     public class NhanVienController : Controller
     {
-        [AdminAuthorize(idChucNang = 1)]
-        public ActionResult DanhSach()
-        {        
-            return View();
+        DBQLEcommerceShopEntities db = new DBQLEcommerceShopEntities();
+
+        public ActionResult DanhSach(string search)
+        {
+            var nhanviens = db.NhanViens.AsQueryable();
+            if (!string.IsNullOrEmpty(search))
+                nhanviens = nhanviens.Where(n => n.TenNhanVien.Contains(search) || n.Username.Contains(search));
+            return View(nhanviens.ToList());
         }
-        [AdminAuthorize(idChucNang = 2)]
-        public ActionResult ThemMoi()
-        {         
-            return View();
+
+        [HttpGet]
+        public ActionResult ThemMoi() => View();
+
+        [HttpPost]
+        public ActionResult ThemMoi(NhanVien nv)
+        {
+            if (ModelState.IsValid)
+            {
+                db.NhanViens.Add(nv);
+                db.SaveChanges();
+                return RedirectToAction("DanhSach");
+            }
+            return View(nv);
         }
-        [AdminAuthorize(idChucNang = 3)]
-        public ActionResult CapNhat()
-        {         
-            return View();
-        }
-        [AdminAuthorize(idChucNang = 4)]
-        public ActionResult Xoa()
-        {           
-            return View();
+
+        public ActionResult Xoa(int id)
+        {
+            var nv = db.NhanViens.Find(id);
+            if (nv != null)
+            {
+                db.NhanViens.Remove(nv);
+                db.SaveChanges();
+            }
+            return RedirectToAction("DanhSach");
         }
     }
 }

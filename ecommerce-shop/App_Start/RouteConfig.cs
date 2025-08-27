@@ -12,15 +12,14 @@ namespace ecommerce_shop
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
             routes.MapRoute(
-                name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                name: "Robots",
+                url: "robots.txt",
+                defaults: new { controller = "Robots", action = "Index" }
             );
 
             routes.MapRoute(
-                name: "Detail",
+                name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );

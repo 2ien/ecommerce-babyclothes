@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using System.Web;
@@ -11,7 +10,7 @@ namespace ecommerce_shop.Controllers
   
     public class ShoppingCartController : Controller
     {
-        DBQLEcommerceShopEntities db = new DBQLEcommerceShopEntities();
+        DBQLEcommerceShopEntities1 db = new DBQLEcommerceShopEntities1();
         // GET: ShoppingCart
         public ActionResult ShowCart()
         {
@@ -22,20 +21,20 @@ namespace ecommerce_shop.Controllers
         }
         public Cart GetCart()
         {
-            Cart cart = Session["Cart"] as Cart;
-            if (cart == null || Session["Cart"] == null)
+            Cart _cart = Session["Cart"] as Cart;
+            if (_cart == null || Session["Cart"] == null)
             {
-                cart = new Cart();
-                Session["Cart"] = cart;
+                _cart = new Cart();
+                Session["Cart"] = _cart;
             }
-            return cart;
+            return _cart;
         }
-        public ActionResult AddToCart(int id)
+        public ActionResult AddtoCart(int id)
         {
-            var _pro = db.SanPhams.SingleOrDefault(s => s.ID == id);
-            if(_pro!= null)
+            var pro = db.SanPhams.SingleOrDefault(s => s.ID == id);
+            if(pro!= null)
             {
-                GetCart().Add(_pro);
+                GetCart().Add(pro);
             }
             return RedirectToAction("ShowCart","ShoppingCart");
         }
@@ -46,7 +45,6 @@ namespace ecommerce_shop.Controllers
             int quantity = int.Parse(form["Quantity"]);
             cart.Update_Quantity(id_pro, quantity);
             return RedirectToAction("ShowCart", "ShoppingCart");
-
         }
         public ActionResult RemoveCart(int id)
         {
@@ -54,60 +52,6 @@ namespace ecommerce_shop.Controllers
             cart.Remove_CartItem(id);
             return RedirectToAction("ShowCart", "ShoppingCart");
         }
-        public PartialViewResult BagCart()
-        {
-            int total_quantity_item = 0;
-            Cart cart = Session["Cart"] as Cart;
-            if (cart != null)
-                total_quantity_item = cart.ToTal_Quantity();
-            ViewBag.QuantityCart = total_quantity_item;
-            return PartialView("BagCart");
-        }
-        public ActionResult EmptyCart()
-        {
-            return View();
-        }
-        public ActionResult CheckOut(FormCollection form)
-        {
-            try
-            {
-                Cart cart = Session["Cart"] as Cart;
-                HoaDon order = new HoaDon();//Bảng hoá đơn sản phẩm
-                order.NgayBan = DateTime.Now;
-                order.DiaChi = form["DiaChi"];
-                db.HoaDons.Add(order);
-                foreach (var item in cart.Items)
-                {
-                    ChiTietHoaDon detail = new ChiTietHoaDon();//Lưu dòng sản phẩm vào bảng chi tết hoá đơn
-                    detail.idHoaDon = order.ID;
-                    detail.idSanPham = item._sanpham.ID;
-                    detail.DonGia = item._sanpham.GiaBan;
-                    detail.SoLuong = item._quantity;
-                    db.ChiTietHoaDons.Add(detail);
-                    //xử lý cập nhật lại só lượng tồn trong bảng product
-                    /*foreach (var p in database.Products.Where(s => s.ProductID == detail.IDProduct))
-                    {
-                        var updatequanpro = p.Quantity - item.quantity; //số lượng tồn mới = số lượng tồn - số lượng mua
-                        p.Quantity = updatequanpro;// thực hiện cập nhật lại số lượng tồn cho cột Quantity của bảng Product
-                    }*/
-                }
-                db.SaveChanges();
-                cart.ClearCart();
-                return RedirectToAction("CheckOutSuccess", "ShoppingCart");
-            }
-            catch
-            {
-                return Content("Lỗi!!! Vui lòng kiểm tra thông tin khác hàng");
-            }
-
-        }
-        public ActionResult CheckOutSuccess()
-        {
-            return View();
-        }
-        public ActionResult ReCheckOut()
-        {
-            return View();
-        }
+    
     }
 }
